@@ -106,7 +106,7 @@ npm install gulp -g
 gulp -v
 显示版本号即安装成功 
 3.项目文件根目录新建package.js">
-<meta property="og:updated_time" content="2016-11-16T08:13:45.000Z">
+<meta property="og:updated_time" content="2016-11-19T08:48:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp的简易安装流程">
 <meta name="twitter:description" content="安裝gulp1.安装  nodenode下载地址：http://nodejs.cn/download/ 安装比较简单，基本一直下一步即可，安装路径随意。安装完成后，终端输入如下命令 显示版本号即安装成功。
@@ -329,8 +329,8 @@ gulp -v
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-16T16:13:45+08:00">
-              2016-11-16
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-19T16:48:31+08:00">
+              2016-11-19
             </time>
             
           </span>
@@ -398,27 +398,11 @@ gulp -v
 <pre><code>npm install gulp-jade gulp-sass
 </code></pre><h4 id="新建gulpfile-js"><a href="#新建gulpfile-js" class="headerlink" title="新建gulpfile.js"></a>新建gulpfile.js</h4><p>注：gulpfile.js是gulp的配置文件，放于根目录中</p>
 <p>在gulpfile.js 引入插件</p>
-<pre><code>// 引入你所需要用到的插件 require(&quot;引入的插件名称&quot;);
-var jade = require(&quot;gulp-jade&quot;);
-var sass = require(&quot;gulp-sass&quot;);
-var gulp = require(&quot;gulp&quot;);
-</code></pre><p>定制任务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 引入你所需要用到的插件 require(&quot;引入的插件名称&quot;);</div><div class="line">var jade = require(&quot;gulp-jade&quot;);</div><div class="line">var sass = require(&quot;gulp-sass&quot;);</div><div class="line">var gulp = require(&quot;gulp&quot;);</div></pre></td></tr></table></figure>
+<p>定制任务</p>
 <p>创建sass文件目录</p>
-<pre><code>// 写任务 默认任务名 default
-gulp.task(&quot;sass&quot;,function(){
-    gulp.src(&quot;sass/*.scss&quot;)        //获取该任务需要的文件
-    .pipe(sass())                //该任务调用的模块
-    .pipe(gulp.dest(&quot;css/&quot;))    //将在css文件夹中生成css文件
-});
-
-//    默认任务
-gulp.task(&quot;default&quot;,[&quot;sass&quot;,&quot;watch&quot;]);
-
-//监听文件
-gulp.task(&quot;watch&quot;,function(){
-    gulp.watch(&quot;sass/*.scss&quot;,[&quot;sass&quot;])    //监听sass文件里所有以‘*.scss’结尾的文件，修改时自动执行 sass 任务。
-});
-</code></pre><h4 id="运行-gulp"><a href="#运行-gulp" class="headerlink" title="运行    gulp"></a>运行    gulp</h4><p>执行  gulp 任务名称    运行该任务 示例：gulp sass 执行gulpfile.js中的sass任务 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// 写任务 默认任务名 default</div><div class="line">gulp.task(&quot;sass&quot;,function()&#123;</div><div class="line">	gulp.src(&quot;sass/*.scss&quot;)		//获取该任务需要的文件</div><div class="line">	.pipe(sass())				//该任务调用的模块</div><div class="line">	.pipe(gulp.dest(&quot;css/&quot;))	//将在css文件夹中生成css文件</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//	默认任务</div><div class="line">gulp.task(&quot;default&quot;,[&quot;sass&quot;,&quot;watch&quot;]);</div><div class="line"></div><div class="line">//监听文件</div><div class="line">gulp.task(&quot;watch&quot;,function()&#123;</div><div class="line">	gulp.watch(&quot;sass/*.scss&quot;,[&quot;sass&quot;])	//监听sass文件里所有以‘*.scss’结尾的文件，修改时自动执行 sass 任务。</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="运行-gulp"><a href="#运行-gulp" class="headerlink" title="运行    gulp"></a>运行    gulp</h4><p>执行  gulp 任务名称    运行该任务 示例：gulp sass 执行gulpfile.js中的sass任务 </p>
 <p>执行    gulp    调用default中的所有任务 </p>
 <h4 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h4><p>sass的编译 (gulp-sass)</p>
 <p>less编译 （gulp-less）</p>
