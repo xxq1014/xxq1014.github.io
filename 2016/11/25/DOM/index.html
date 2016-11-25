@@ -96,7 +96,7 @@
 <meta property="og:description" content="##DOM的概念及子节点类型
 前言DOM的作用是将网页转为一个javascript对象，从而可以使用javascript对网页进行各种操作(比如增删内容)。浏览器会根据DOM模型，将HTML文档解析成一系列的节点，再由这些节点组成一个树状结构。DOM的最小组成单位叫做节点(node)，文档的树形结构(DOM树)由12种类型的节点组成。
 一、DOMDOM ==&amp;gt; 全称： document Ob">
-<meta property="og:updated_time" content="2016-11-25T12:51:46.000Z">
+<meta property="og:updated_time" content="2016-11-25T12:54:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM的概念及子节点类型">
 <meta name="twitter:description" content="##DOM的概念及子节点类型
@@ -314,7 +314,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-25T20:51:46+08:00">
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-25T20:54:41+08:00">
               2016-11-25
             </time>
             
@@ -460,7 +460,7 @@ DTD声明节点        Node.NOTATION_NODE(12)   nodeType值： 12
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;myDiv&quot;&gt;&lt;!-- 我是注释内容 --&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var com = myDiv.firstChild;</div><div class="line">	//8 &apos;#comment&apos; &apos;我是注释内容&apos;</div><div class="line">	console.log(com.nodeType,com.nodeName,com.nodeValue)</div><div class="line">	console.log(Node.COMMENT_NODE === 8);//true </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <p>【9】文档节点</p>
 <p>文档节点document表示HTML文档，也称为根节点，指向document对象。文档节点的节点类型nodeType的值为9，节点名称nodeName的值为’#document’，nodeValue的值为null</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">	&lt;!DOCTYPE html&gt;</div><div class="line">	&lt;html lang=&quot;en&quot;&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;title&gt;Document&lt;/title&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">		var nodeDocumentType = document.firstChild;</div><div class="line">		//10 &quot;html&quot; null</div><div class="line">		console.log(nodeDocumentType.nodeType,nodeDocumentType.nodeName,nodeDocumentType.nodeValue);</div><div class="line">		console.log(Node.DOCUMENT_TYPE_NODE === 10);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var nodeDocumentType = document.firstChild;</div><div class="line">	//10 &quot;html&quot; null</div><div class="line">	console.log(nodeDocumentType.nodeType,nodeDocumentType.nodeName,nodeDocumentType.nodeValue);</div><div class="line">	console.log(Node.DOCUMENT_TYPE_NODE === 10);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
 <p>【11】文档片段节点</p>
 <p>文档片段节点DocumentFragment在文档中没有对应的标记，是一种轻量级的文档，可以包含和控制节点，但不会像完整的文档寻亲战胜额外的资源。该节点的节点类型nodeType的值为11，节点名称nodeName的值为’#document-fragment’，nodeValue的值为null</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">	var nodeDocumentFragment = document.createDocumentFragment(); </div><div class="line">	//11 &quot;#document-fragment&quot; null</div><div class="line">	console.log(nodeDocumentFragment.nodeType,nodeDocumentFragment.nodeName,nodeDocumentFragment.nodeValue);</div><div class="line">	console.log(Node.DOCUMENT_FRAGMENT_NODE === 11);//true</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
@@ -510,6 +510,10 @@ DTD声明节点        Node.NOTATION_NODE(12)   nodeType值： 12
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/25/iframe/" rel="prev" title="iframe">
+                iframe <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -581,7 +585,7 @@ DTD声明节点        Node.NOTATION_NODE(12)   nodeType值： 12
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -591,7 +595,7 @@ DTD声明节点        Node.NOTATION_NODE(12)   nodeType值： 12
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
