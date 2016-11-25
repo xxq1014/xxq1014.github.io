@@ -1,0 +1,1078 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="DOM,JavaSceipt," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="小菜鸟的成长之路" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="##DOM的概念及子节点类型
+前言DOM的作用是将网页转为一个javascript对象，从而可以使用javascript对网页进行各种操作(比如增删内容)。浏览器会根据DOM模型，将HTML文档解析成一系列的节点，再由这些节点组成一个树状结构。DOM的最小组成单位叫做节点(node)，文档的树形结构(DOM树)由12种类型的节点组成。
+一、DOMDOM ==&amp;gt; 全称： document Ob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM的概念及子节点类型">
+<meta property="og:url" content="http://yoursite.com/2016/11/25/DOM/index.html">
+<meta property="og:site_name" content="小菜鸟的成长之路">
+<meta property="og:description" content="##DOM的概念及子节点类型
+前言DOM的作用是将网页转为一个javascript对象，从而可以使用javascript对网页进行各种操作(比如增删内容)。浏览器会根据DOM模型，将HTML文档解析成一系列的节点，再由这些节点组成一个树状结构。DOM的最小组成单位叫做节点(node)，文档的树形结构(DOM树)由12种类型的节点组成。
+一、DOMDOM ==&amp;gt; 全称： document Ob">
+<meta property="og:updated_time" content="2016-11-25T12:51:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DOM的概念及子节点类型">
+<meta name="twitter:description" content="##DOM的概念及子节点类型
+前言DOM的作用是将网页转为一个javascript对象，从而可以使用javascript对网页进行各种操作(比如增删内容)。浏览器会根据DOM模型，将HTML文档解析成一系列的节点，再由这些节点组成一个树状结构。DOM的最小组成单位叫做节点(node)，文档的树形结构(DOM树)由12种类型的节点组成。
+一、DOMDOM ==&amp;gt; 全称： document Ob">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/25/DOM/"/>
+
+
+
+
+
+  <title> DOM的概念及子节点类型 | 小菜鸟的成长之路 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">小菜鸟的成长之路</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/25/DOM/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="XuXuqian">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140912/upload/201409/r5jhck1h4vvjpg.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="小菜鸟的成长之路">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="小菜鸟的成长之路" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                DOM的概念及子节点类型
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-25T20:23:10+08:00">
+              2016-11-25
+            </time>
+
+            &nbsp;|&nbsp;
+
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-check-o"></i>
+            </span>
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-25T20:51:46+08:00">
+              2016-11-25
+            </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/25/DOM/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/25/DOM/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/25/DOM/" class="leancloud_visitors" data-flag-title="DOM的概念及子节点类型">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>##DOM的概念及子节点类型</p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>DOM的作用是将网页转为一个javascript对象，从而可以使用javascript对网页进行各种操作(比如增删内容)。浏览器会根据DOM模型，将HTML文档解析成一系列的节点，再由这些节点组成一个树状结构。DOM的最小组成单位叫做节点(node)，文档的树形结构(DOM树)由12种类型的节点组成。</p>
+<h3 id="一、DOM"><a href="#一、DOM" class="headerlink" title="一、DOM"></a>一、DOM</h3><p>DOM ==&gt; 全称： document Object Mode   文档对象模型</p>
+<p>文档： html页面</p>
+<p>文档对象：页面元素（节点）</p>
+<p>文档对象模型： W3C标准定义：为了能够使用javascript去操作页面中的元素定义出来的标准</p>
+<h3 id="二、DOM会把文档当成一节点树，文档里面的每一个元素都是一个节点。同时定义了很多方法来操作这些节点（元素）"><a href="#二、DOM会把文档当成一节点树，文档里面的每一个元素都是一个节点。同时定义了很多方法来操作这些节点（元素）" class="headerlink" title="二、DOM会把文档当成一节点树，文档里面的每一个元素都是一个节点。同时定义了很多方法来操作这些节点（元素）"></a>二、DOM会把文档当成一节点树，文档里面的每一个元素都是一个节点。同时定义了很多方法来操作这些节点（元素）</h3><h3 id="三、属性"><a href="#三、属性" class="headerlink" title="三、属性"></a>三、属性</h3><h4 id="什么是属性："><a href="#什么是属性：" class="headerlink" title="什么是属性："></a>什么是属性：</h4><p>1.使用的时候不用再前面加括号</p>
+<p>2.一个属性肯定是某个对象下面的，所以在使用的时候肯定是调用某个对象（元素）下面的属性</p>
+<p>元素.childNodes（存在兼容性，不推荐使用，推荐使用另一个 children）</p>
+<p>元素.children  （不管在标准还是非标准下，只包含元素类型的节点。推荐使用</p>
+<ul>
+<li><p>特点：只读属性。</p>
+</li>
+<li><p>代表：子节点列表集合,试剂盒就有长度，可使用数组形式获取(只包含儿子子节点，不包含孙子子节点)</p>
+</li>
+<li><p>获取：实行 [] 下表获取</p>
+</li>
+<li><p>标准模式下（非IE）：childNodes 包含了文本和元素类型节点，也会包含非法嵌套的子节点（注意：不是孙子节点）</p>
+</li>
+<li><p>非标准：childNodes只包含元素类型的节点。ie7以不会包含非法嵌套子节点</p>
+</li>
+<li><p>ul元素下面的所有子元素都包括在这个childNodes属性里面</p>
+</li>
+<li><p>访问ul里面的所有 li 子元素形式：</p>
+<pre><code>var oul =  document.getElementById(&apos;ul&apos;);
+
+oul.childNodes.length// 9  标准模式下
+</code></pre></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;ul id=&apos;ul&apos;&gt;</div><div class="line">	&lt;li&gt;1&lt;/li&gt;</div><div class="line">	&lt;li&gt;2&lt;/li&gt;</div><div class="line">	&lt;li&gt;3&lt;/li&gt;</div><div class="line">	&lt;li&gt;4&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
+<p>为什么是9呢？</p>
+<p>DOM里面定义了12种节点：</p>
+<p>一般地，节点至少拥有<strong>nodeType</strong>、<strong>nodeName</strong>和<strong>nodeValue</strong>这三个基本属性。</p>
+<p>元素.<strong>nodeType</strong></p>
+<ul>
+<li>只读属性，代表当前元素的类型</li>
+<li>nodeType属性返回节点类型的常数值。不同的类型对应不同的常数值，12种类型分别对应1到12的常数值</li>
+</ul>
+<p>元素.<strong>attributes</strong></p>
+<ul>
+<li>只读属性，代表当前元素的属性是什么（如：id，border，，，等属性）</li>
+<li>属性列表集合</li>
+<li>属性的名称：元素.attributes[0].name</li>
+<li>属性的值：元素.attributes[0].value</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;ul id=&apos;ul&apos; style= &apos;color&apos;,&apos;red&apos;&gt;</div><div class="line">   	&lt;li&gt;1&lt;/li&gt;</div><div class="line">   	&lt;li&gt;2&lt;/li&gt;</div><div class="line">   	&lt;li&gt;3&lt;/li&gt;</div><div class="line">   	&lt;li&gt;4&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">var oul =  document.getElementById(&apos;ul&apos;);</div><div class="line">oul.attributes.length  //2</div><div class="line">oul.attributes[0].name  //id</div><div class="line">元素.attributes[1].value  //red</div></pre></td></tr></table></figure>
+<pre><code>元素节点        Node.ELEMENT_NODE(1)   nodeType值： 1
+
+属性节点        Node.ATTRIBUTE_NODE(2)  nodeType值： 2
+
+文本节点        Node.TEXT_NODE(3)  nodeType值： 3
+
+CDATA节点        Node.CDATA_SECTION_NODE(4)   nodeType值： 4
+
+实体引用名称节点        Node.ENTRY_REFERENCE_NODE(5)  nodeType值： 5
+
+实体名称节点        Node.ENTITY_NODE(6)  nodeType值： 6
+
+处理指令节点        Node.PROCESSING_INSTRUCTION_NODE(7)   nodeType值： 7
+
+注释节点        Node.COMMENT_NODE(8)   nodeType值： 8
+
+文档节点        Node.DOCUMENT_NODE(9)        nodeType值： 9
+
+文档类型节点        Node.DOCUMENT_TYPE_NODE(10)   nodeType值： 10
+
+文档片段节点        Node.DOCUMENT_FRAGMENT_NODE(11)   nodeType值： 11
+
+DTD声明节点        Node.NOTATION_NODE(12)   nodeType值： 12
+</code></pre><p>DOM定义了一个Node接口，这个接口在javascript中是作为Node类型实现的，而在IE8-浏览器中的所有DOM对象都是以COM对象的形式实现的。所以，IE8-浏览器并不支持Node对象的写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 //在标准浏览器下返回1，而在IE8-浏览器中报错，提示Node未定义  2 console.log(Node.ELEMENT_NODE);//1</div></pre></td></tr></table></figure>
+<p><strong>nodeName</strong></p>
+<p>nodeName属性返回节点的名称</p>
+<p><strong>nodeValue</strong></p>
+<p>nodeValue属性返回或设置当前节点的值，格式为字符串</p>
+<p>接下来，将按照节点类型的常数值对应顺序，从1到12进行详细说明</p>
+<h4 id="【1】元素节点"><a href="#【1】元素节点" class="headerlink" title="【1】元素节点"></a>【1】元素节点</h4><p>元素节点element对应网页的HTML标签元素。元素节点的节点类型nodeType值是1，节点名称nodeName值是大写的标签名，nodeValue值是null</p>
+<p>以body元素为例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 1 &apos;BODY&apos; null</div><div class="line"></div><div class="line">console.log(document.body.nodeType,document.body.nodeName,document.body.nodeValue)</div><div class="line"></div><div class="line">console.log(Node.ELEMENT_NODE === 1);//true</div></pre></td></tr></table></figure>
+<h4 id="【2】特性节点"><a href="#【2】特性节点" class="headerlink" title="【2】特性节点"></a>【2】特性节点</h4><p>元素特性节点attribute对应网页中HTML标签的属性，它只存在于元素的attributes属性中，并不是DOM文档树的一部分。特性节点的节点类型nodeType值是2，节点名称nodeName值是属性名，nodeValue值是属性值</p>
+<p>现在，div元素有id=”test”的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;test&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var attr = test.attributes.id;</div><div class="line">	//2 &apos;id&apos; &apos;test&apos;</div><div class="line">	console.log(attr.nodeType,attr.nodeName,attr.nodeValue)</div><div class="line">	console.log(Node.ATTRIBUTE_NODE === 2);//true </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h4 id="【3】文本节点"><a href="#【3】文本节点" class="headerlink" title="【3】文本节点"></a>【3】文本节点</h4><p>文本节点text代表网页中的HTML标签内容。文本节点的节点类型nodeType值是3，节点名称nodeName值是’#text’，nodeValue值是标签内容值</p>
+<p>现在，div元素内容为’测试’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;test&quot;&gt;测试&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var txt = test.firstChild;</div><div class="line">	//3 &apos;#text&apos; &apos;测试&apos;</div><div class="line">	console.log(txt.nodeType,txt.nodeName,txt.nodeValue)</div><div class="line">	console.log(Node.TEXT_NODE === 3);//true </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h4 id="【4】CDATA节点"><a href="#【4】CDATA节点" class="headerlink" title="【4】CDATA节点"></a>【4】CDATA节点</h4><p>CDATASection类型只针对基于XML的文档，只出现在XML文档中，表示的是CDATA区域，格式一般为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;![CDATA[</div><div class="line">]]&gt;</div></pre></td></tr></table></figure>
+<p>该类型节点的节点类型nodeType的值为4，节点名称nodeName的值为’#cdata-section’，nodevalue的值是CDATA区域中的内容</p>
+<h4 id="【5】实体引用名称节点"><a href="#【5】实体引用名称节点" class="headerlink" title="【5】实体引用名称节点"></a>【5】实体引用名称节点</h4><p>实体是一个声明，指定了在XML中取代内容或标记而使用的名称。 实体包含两个部分， 首先，必须使用实体声明将名称绑定到替换内容。 实体声明是使用 &lt;!ENTITY name “value”&gt; 语法在文档类型定义(DTD)或XML架构中创建的。其次，在实体声明中定义的名称随后将在 XML 中使用。 在XML中使用时，该名称称为实体引用。</p>
+<p>实体引用名称节点entry_reference的节点类型nodeType的值为5，节点名称nodeName的值为实体引用的名称，nodeValue的值为null</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//实体名称</div><div class="line">&lt;!ENTITY publisher &quot;Microsoft Press&quot;&gt;</div><div class="line">//实体名称引用</div><div class="line">&lt;pubinfo&gt;Published by &amp;publisher;&lt;/pubinfo&gt;</div></pre></td></tr></table></figure>
+<h4 id="【6】实体名称节点"><a href="#【6】实体名称节点" class="headerlink" title="【6】实体名称节点"></a>【6】实体名称节点</h4><p>上面已经详细解释过，就不再赘述</p>
+<p>该节点的节点类型nodeType的值为6，节点名称nodeName的值为实体名称，nodeValue的值为null</p>
+<h4 id="【7】处理指令节点"><a href="#【7】处理指令节点" class="headerlink" title="【7】处理指令节点"></a>【7】处理指令节点</h4><p>处理指令节点ProcessingInstruction的节点类型nodeType的值为7，节点名称nodeName的值为target，nodeValue的值为entire content excluding the target</p>
+<h4 id="【8】注释节点"><a href="#【8】注释节点" class="headerlink" title="【8】注释节点"></a>【8】注释节点</h4><p>注释节点comment表示网页中的HTML注释。注释节点的节点类型nodeType的值为8，节点名称nodeName的值为’#comment’，nodeValue的值为注释的内容现在，在id为myDiv的div元素中存在一个我是注释内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;myDiv&quot;&gt;&lt;!-- 我是注释内容 --&gt;&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var com = myDiv.firstChild;</div><div class="line">	//8 &apos;#comment&apos; &apos;我是注释内容&apos;</div><div class="line">	console.log(com.nodeType,com.nodeName,com.nodeValue)</div><div class="line">	console.log(Node.COMMENT_NODE === 8);//true </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>【9】文档节点</p>
+<p>文档节点document表示HTML文档，也称为根节点，指向document对象。文档节点的节点类型nodeType的值为9，节点名称nodeName的值为’#document’，nodeValue的值为null</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">	&lt;!DOCTYPE html&gt;</div><div class="line">	&lt;html lang=&quot;en&quot;&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;title&gt;Document&lt;/title&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">		var nodeDocumentType = document.firstChild;</div><div class="line">		//10 &quot;html&quot; null</div><div class="line">		console.log(nodeDocumentType.nodeType,nodeDocumentType.nodeName,nodeDocumentType.nodeValue);</div><div class="line">		console.log(Node.DOCUMENT_TYPE_NODE === 10);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>【11】文档片段节点</p>
+<p>文档片段节点DocumentFragment在文档中没有对应的标记，是一种轻量级的文档，可以包含和控制节点，但不会像完整的文档寻亲战胜额外的资源。该节点的节点类型nodeType的值为11，节点名称nodeName的值为’#document-fragment’，nodeValue的值为null</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">	var nodeDocumentFragment = document.createDocumentFragment(); </div><div class="line">	//11 &quot;#document-fragment&quot; null</div><div class="line">	console.log(nodeDocumentFragment.nodeType,nodeDocumentFragment.nodeName,nodeDocumentFragment.nodeValue);</div><div class="line">	console.log(Node.DOCUMENT_FRAGMENT_NODE === 11);//true</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>【12】DTD声明节点</p>
+<p>DTD声明节点notation代表DTD中声明的符号。该节点的节点类型nodeType的值为12，节点名称nodeName的值为符号名称，nodeValue的值为null </p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在这12种DOM节点类型中，有一些适用于XML文档，有一些是不常用的类型。而对于常用类型，后面会陆续进行详细介绍，本文对这12种节点类型只做概述，希望本文对大家能有所帮助。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DOM/" rel="tag"># DOM</a>
+          
+            <a href="/tags/JavaSceipt/" rel="tag"># JavaSceipt</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/25/flex/" rel="next" title="flex-box弹性盒子布局">
+                <i class="fa fa-chevron-left"></i> flex-box弹性盒子布局
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/25/DOM/"
+           data-title="DOM的概念及子节点类型" data-url="http://yoursite.com/2016/11/25/DOM/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://dynamic-image.yesky.com/600x-/uploadImages/upload/20140912/upload/201409/r5jhck1h4vvjpg.jpg"
+               alt="XuXuqian" />
+          <p class="site-author-name" itemprop="name">XuXuqian</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xxq1014" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5445840603" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zjflove.github.io/" title="章江锋" target="_blank">章江锋</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://gedapao.github.io/" title="葛佳阳" target="_blank">葛佳阳</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://yyjcnm.github.io/" title="杨永杰" target="_blank">杨永杰</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、DOM"><span class="nav-number">2.</span> <span class="nav-text">一、DOM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、DOM会把文档当成一节点树，文档里面的每一个元素都是一个节点。同时定义了很多方法来操作这些节点（元素）"><span class="nav-number">3.</span> <span class="nav-text">二、DOM会把文档当成一节点树，文档里面的每一个元素都是一个节点。同时定义了很多方法来操作这些节点（元素）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、属性"><span class="nav-number">4.</span> <span class="nav-text">三、属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是属性："><span class="nav-number">4.1.</span> <span class="nav-text">什么是属性：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【1】元素节点"><span class="nav-number">4.2.</span> <span class="nav-text">【1】元素节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【2】特性节点"><span class="nav-number">4.3.</span> <span class="nav-text">【2】特性节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【3】文本节点"><span class="nav-number">4.4.</span> <span class="nav-text">【3】文本节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【4】CDATA节点"><span class="nav-number">4.5.</span> <span class="nav-text">【4】CDATA节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【5】实体引用名称节点"><span class="nav-number">4.6.</span> <span class="nav-text">【5】实体引用名称节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【6】实体名称节点"><span class="nav-number">4.7.</span> <span class="nav-text">【6】实体名称节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【7】处理指令节点"><span class="nav-number">4.8.</span> <span class="nav-text">【7】处理指令节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#【8】注释节点"><span class="nav-number">4.9.</span> <span class="nav-text">【8】注释节点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">XuXuqian</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xuxuqian"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("jc95uT8qRtJNShM3nAtQrQxX-gzGzoHsz", "qYnJ9yI5k3z5Bmw5eLR9GTat");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
