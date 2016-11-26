@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="iframe," />
+  <meta name="keywords" content="float," />
 
 
 
@@ -86,28 +86,128 @@
 
 
 
-<meta name="description" content="iframe关于滚动条的去除和保留iframe嵌入页面后，我们有时需要调整滚动条，例如，去掉全部的滚动条，去掉右边的滚动条且保留底下的滚动条，去掉底下的滚动条且保留右边的滚动条。那么我们应该怎么做呢？
-一：去掉全部的滚动条
-第一个方法：
-  iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。
-  scrolling : auto —–在需要的时候滚动条出现">
+<meta name="description" content="CSS Float 以及相关布局模式float 取值
+
+
+属性
+值
+描述
+
+
+
+
+
+left
+向左浮动
+
+
+
+right
+向右浮动
+
+
+
+none
+默认值
+
+
+
+inherit
+继承
+
+
+
+举个例子红色线框代表父元素
+
+脱离文档流，其实也没有完全脱离，会被父元素的边界挡住。
+float的元素在同一文档流看个例子：红线框代表父元素
+三个子元素『向左浮动』之后， 父元素就没有内容了，所以父元素没有高度">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iframe关于滚动条的去除和保留">
-<meta property="og:url" content="http://yoursite.com/2016/11/25/iframe/index.html">
+<meta property="og:title" content="CSS Float 以及相关布局模式">
+<meta property="og:url" content="http://yoursite.com/2016/11/26/float/index.html">
 <meta property="og:site_name" content="小菜鸟的成长之路">
-<meta property="og:description" content="iframe关于滚动条的去除和保留iframe嵌入页面后，我们有时需要调整滚动条，例如，去掉全部的滚动条，去掉右边的滚动条且保留底下的滚动条，去掉底下的滚动条且保留右边的滚动条。那么我们应该怎么做呢？
-一：去掉全部的滚动条
-第一个方法：
-  iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。
-  scrolling : auto —–在需要的时候滚动条出现">
-<meta property="og:updated_time" content="2016-11-25T13:47:48.000Z">
+<meta property="og:description" content="CSS Float 以及相关布局模式float 取值
+
+
+属性
+值
+描述
+
+
+
+
+
+left
+向左浮动
+
+
+
+right
+向右浮动
+
+
+
+none
+默认值
+
+
+
+inherit
+继承
+
+
+
+举个例子红色线框代表父元素
+
+脱离文档流，其实也没有完全脱离，会被父元素的边界挡住。
+float的元素在同一文档流看个例子：红线框代表父元素
+三个子元素『向左浮动』之后， 父元素就没有内容了，所以父元素没有高度">
+<meta property="og:image" content="http://ww4.sinaimg.cn/mw1024/005WybULgw1fa5b5itca7j30i80biq4l.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa5b5izogbj30w708ymym.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa5b5j6lg1j30tq04ftaw.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw1024/005WybULgw1fa5b5jeyx4j30bm08wmyq.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw1024/005WybULgw1fa5b5jt9zhj30cp061q48.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw1024/005WybULgw1fa5b5juohuj30dy06vwfz.jpg">
+<meta property="og:updated_time" content="2016-11-26T03:15:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iframe关于滚动条的去除和保留">
-<meta name="twitter:description" content="iframe关于滚动条的去除和保留iframe嵌入页面后，我们有时需要调整滚动条，例如，去掉全部的滚动条，去掉右边的滚动条且保留底下的滚动条，去掉底下的滚动条且保留右边的滚动条。那么我们应该怎么做呢？
-一：去掉全部的滚动条
-第一个方法：
-  iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。
-  scrolling : auto —–在需要的时候滚动条出现">
+<meta name="twitter:title" content="CSS Float 以及相关布局模式">
+<meta name="twitter:description" content="CSS Float 以及相关布局模式float 取值
+
+
+属性
+值
+描述
+
+
+
+
+
+left
+向左浮动
+
+
+
+right
+向右浮动
+
+
+
+none
+默认值
+
+
+
+inherit
+继承
+
+
+
+举个例子红色线框代表父元素
+
+脱离文档流，其实也没有完全脱离，会被父元素的边界挡住。
+float的元素在同一文档流看个例子：红线框代表父元素
+三个子元素『向左浮动』之后， 父元素就没有内容了，所以父元素没有高度">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/mw1024/005WybULgw1fa5b5itca7j30i80biq4l.jpg">
 
 
 
@@ -135,13 +235,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/25/iframe/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/26/float/"/>
 
 
 
 
 
-  <title> iframe关于滚动条的去除和保留 | 小菜鸟的成长之路 </title>
+  <title> CSS Float 以及相关布局模式 | 小菜鸟的成长之路 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -275,7 +375,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/25/iframe/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/26/float/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="XuXuqian">
@@ -299,7 +399,7 @@
             
             
               
-                iframe关于滚动条的去除和保留
+                CSS Float 以及相关布局模式
               
             
           </h1>
@@ -311,8 +411,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-25T21:36:23+08:00">
-              2016-11-25
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-26T10:33:08+08:00">
+              2016-11-26
             </time>
 
             &nbsp;|&nbsp;
@@ -320,8 +420,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-25T21:47:48+08:00">
-              2016-11-25
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-26T11:15:38+08:00">
+              2016-11-26
             </time>
             
           </span>
@@ -332,8 +432,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/25/iframe/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/25/iframe/" itemprop="commentCount"></span>
+                <a href="/2016/11/26/float/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/26/float/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -343,7 +443,7 @@
 
           
           
-             <span id="/2016/11/25/iframe/" class="leancloud_visitors" data-flag-title="iframe关于滚动条的去除和保留">
+             <span id="/2016/11/26/float/" class="leancloud_visitors" data-flag-title="CSS Float 以及相关布局模式">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -368,24 +468,94 @@
       
 
       
-        <h3 id="iframe关于滚动条的去除和保留"><a href="#iframe关于滚动条的去除和保留" class="headerlink" title="iframe关于滚动条的去除和保留"></a>iframe关于滚动条的去除和保留</h3><p>iframe嵌入页面后，我们有时需要调整滚动条，例如，去掉全部的滚动条，去掉右边的滚动条且保留底下的滚动条，去掉底下的滚动条且保留右边的滚动条。那么我们应该怎么做呢？</p>
-<h4 id="一：去掉全部的滚动条"><a href="#一：去掉全部的滚动条" class="headerlink" title="一：去掉全部的滚动条"></a>一：去掉全部的滚动条</h4><ul>
-<li><p>第一个方法：</p>
-<p>  iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。</p>
-<p>  scrolling : auto —–在需要的时候滚动条出现</p>
-<p>  scrolling : yes ——始终显示滚动条</p>
-<p>  scrolling : no ——-始终隐藏滚动条当设置</p>
-<p>  scrolling : no 时，全部的滚动条就没有了。</p>
-</li>
-<li><p>第二个方法：我发现除了 scrolling 可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置 body{overflow：hidden}，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。</p>
-</li>
-</ul>
-<h4 id="二：去掉右边的滚动条且保留底下的滚动条"><a href="#二：去掉右边的滚动条且保留底下的滚动条" class="headerlink" title="二：去掉右边的滚动条且保留底下的滚动条"></a>二：去掉右边的滚动条且保留底下的滚动条</h4><p>如果只想保留底下的滚动条，那么可以在嵌入的页面里设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">body&#123;overflow-x：auto ; overflow-y：hidden；&#125;</div></pre></td></tr></table></figure>
-<h4 id="三：去掉底下的滚动条且保留右边的滚动条"><a href="#三：去掉底下的滚动条且保留右边的滚动条" class="headerlink" title="三：去掉底下的滚动条且保留右边的滚动条"></a>三：去掉底下的滚动条且保留右边的滚动条</h4><p>在嵌入的页面里设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">body&#123;overflow-x：hidden；overflow-y：auto；&#125;</div></pre></td></tr></table></figure>
-<p>我们已经知道了这两个属性都可以设置滚动条的显示和隐藏，那么当两个同时设置时，会出现哪个效果呢？</p>
-<p>通过检测，我发现当<code>scrolling = &quot; auto &quot;</code>或者<code>&quot; yes &quot;</code>时，如果设置了 body，那么就会使用<code>body</code>里的设置；当<code>scrolling = &quot; no &quot;</code>时，不管<code>body</code>设置了什么，都会使用<code>scrolling</code>的设置，即全部的滚动条都被去掉了。</p>
+        <h2 id="CSS-Float-以及相关布局模式"><a href="#CSS-Float-以及相关布局模式" class="headerlink" title="CSS Float 以及相关布局模式"></a>CSS Float 以及相关布局模式</h2><h3 id="float-取值"><a href="#float-取值" class="headerlink" title="float 取值"></a>float 取值</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>left</td>
+<td>向左浮动</td>
+</tr>
+<tr>
+<td></td>
+<td>right</td>
+<td>向右浮动</td>
+</tr>
+<tr>
+<td></td>
+<td>none</td>
+<td>默认值</td>
+</tr>
+<tr>
+<td></td>
+<td>inherit</td>
+<td>继承</td>
+</tr>
+</tbody>
+</table>
+<h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h4><p>红色线框代表父元素</p>
+<p><img src="http://ww4.sinaimg.cn/mw1024/005WybULgw1fa5b5itca7j30i80biq4l.jpg" alt="Mou"></p>
+<p>脱离文档流，其实也没有完全脱离，会被父元素的边界挡住。</p>
+<h3 id="float的元素在同一文档流"><a href="#float的元素在同一文档流" class="headerlink" title="float的元素在同一文档流"></a>float的元素在同一文档流</h3><p>看个例子：红线框代表父元素<br><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa5b5izogbj30w708ymym.jpg" alt="Mou"></p>
+<p>三个子元素『向左浮动』之后， 父元素就没有内容了，所以父元素没有高度了。</p>
+<h3 id="float元素半脱离文档流"><a href="#float元素半脱离文档流" class="headerlink" title="float元素半脱离文档流"></a>float元素半脱离文档流</h3><p>对元素，脱离文档流；对内容，在文档流。元素时会重叠，但是内容不会重叠。</p>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fa5b5j6lg1j30tq04ftaw.jpg" alt="Mou"></p>
+<p>举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;float元素半脱离文档流&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">		body&#123;</div><div class="line">			width: 300px;padding: 5px;line-height: 1.6;</div><div class="line">			border: 1px dashed blue;</div><div class="line">		&#125;</div><div class="line">		.sample&#123;</div><div class="line">			height: 100px;margin-right: 5px;</div><div class="line">			padding: 0 5px; line-height: 100px;background-color: pink;</div><div class="line">   		&#125;</div><div class="line">		.sb&#123;</div><div class="line">			outline: 1px dashed  red;</div><div class="line">		&#125;</div><div class="line">		.sample&#123;</div><div class="line">			float: left;</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div class=&quot;sample&quot;&gt;float : left &lt;/div&gt;</div><div class="line">	&lt;div class=&quot;sb&quot;&gt;A float is a box that is shifted to the left or right on the current line .the most interesting characteristic of a float (o &quot;floated&quot; o &quot;floating&quot; box)is that content may flow along its side (or be prohibited from doing so by the &apos;clear&apos;property).</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1fa5b5jeyx4j30bm08wmyq.jpg" alt="Mou"></p>
+<p>再举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;float abscure&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">		body&#123;</div><div class="line">			width: 400px;line-height: 1.6;</div><div class="line">		&#125;</div><div class="line">		.sample&#123;</div><div class="line">			width: 100px;line-height: 100px;</div><div class="line">			margin: 3px;text-align: center;</div><div class="line">			background-color: pink;</div><div class="line">		&#125;</div><div class="line">		.sb&#123;</div><div class="line">			margin: 10px auto; padding: 5px; border: 1px dashed #0f00fa;</div><div class="line">		&#125;</div><div class="line">		.sample&#123;</div><div class="line">			float: left;</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div class=&quot;sb&quot;&gt;</div><div class="line">		&lt;div class=&quot;sample&quot;&gt;float: left;&lt;/div&gt;</div><div class="line">		第十二届ChinaJoy 动漫游戏展7月31号在上海新国际博览中心开幕，导出是站台表演的帅哥美女。</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=&quot;sb&quot;&gt;</div><div class="line">	有些游戏商为了吸引人气，还请来了著名的演员、模特前来助阵。以下是一批漂亮的Show Girl现场照片。</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://ww3.sinaimg.cn/mw1024/005WybULgw1fa5b5jt9zhj30cp061q48.jpg" alt="Mou"></p>
+<p>通常我们并不想要这个结果，而是粉色div 只被第一个文字块环绕。 需要使用<code>clear</code>属性</p>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h3><p>要理解clear，首先要知道 div是块级元素，在页面中独占一行，自上而下排列，也就是传说中的流</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clear</td>
+<td>both</td>
+<td>包含left 和 right</td>
+</tr>
+<tr>
+<td></td>
+<td>left</td>
+<td>左侧不允许其他浮动元素</td>
+</tr>
+<tr>
+<td></td>
+<td>right</td>
+<td>右侧不允许其他浮动元素</td>
+</tr>
+<tr>
+<td></td>
+<td>none</td>
+<td>默认值</td>
+</tr>
+<tr>
+<td></td>
+<td>inherit</td>
+</tr>
+</tbody>
+</table>
+<p>①应用于后续元素, 来清除浮动对后续的影响。</p>
+<p>②应用于块级元素</p>
+<h4 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h4><p>增加一个空白元素(用得较少)</p>
+<p><code>clearfix</code>，这是一般通用方案。实际上是用一个不可用的点号，来清除浮动。</p>
+<p>举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;title&gt;float abscure&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">		body&#123;</div><div class="line">			width: 400px;line-height: 1.6;</div><div class="line">		&#125;</div><div class="line">		.sample&#123;</div><div class="line">			width: 100px;line-height: 100px;</div><div class="line">			margin: 3px;text-align: center;</div><div class="line">			background-color: pink;</div><div class="line">		&#125;</div><div class="line">		.sb&#123;</div><div class="line">			margin: 10px auto; padding: 5px; border: 1px dashed #0f00fa;</div><div class="line">		&#125;</div><div class="line">		.sample&#123;</div><div class="line">			float: left;</div><div class="line">		&#125;</div><div class="line">		.clearfix:after&#123;</div><div class="line">			content: &apos;.&apos;;     // 在clearfix后面加入一个</div><div class="line">			display: block; // 设置 . 块级元素</div><div class="line">			clear: both;  //清除浮动效果 </div><div class="line">			// 隐藏那个</div><div class="line">			height: 0;       </div><div class="line">			overflow: hidden;</div><div class="line">			visibility: hidden;</div><div class="line">		&#125;</div><div class="line">		//.clearfix&#123;</div><div class="line">			zoom: 1; 由于在IE 低版本中，不支持after属性，所以需要增加zoom属性 </div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div class=&quot;sb clearfix&quot;&gt;</div><div class="line">		&lt;div class=&quot;sample&quot;&gt;float: left;&lt;/div&gt;</div><div class="line">		第十二届ChinaJoy 动漫游戏展7月31号在上海新国际博览中心开幕，导出是站台表演的帅哥美女。</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=&quot;sb&quot;&gt;</div><div class="line">	有些游戏商为了吸引人气，还请来了著名的演员、模特前来助阵。以下是一批漂亮的Show Girl现场照片。</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1fa5b5juohuj30dy06vwfz.jpg" alt="Mou"></p>
 
       
     </div>
@@ -409,7 +579,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/iframe/" rel="tag"># iframe</a>
+            <a href="/tags/float/" rel="tag"># float</a>
           
         </div>
       
@@ -418,8 +588,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/25/DOM/" rel="next" title="DOM的概念及子节点类型">
-                <i class="fa fa-chevron-left"></i> DOM的概念及子节点类型
+              <a href="/2016/11/26/Height-Top/" rel="next" title="clientHeight、offsetHeight、scrollHeight、offsetTop、scrollTop之间的区分">
+                <i class="fa fa-chevron-left"></i> clientHeight、offsetHeight、scrollHeight、offsetTop、scrollTop之间的区分
               </a>
             
           </div>
@@ -427,10 +597,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/25/flexbox/" rel="prev" title="FlexBox标准及兼容写法速查表">
-                FlexBox标准及兼容写法速查表 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -456,8 +622,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/25/iframe/"
-           data-title="iframe关于滚动条的去除和保留" data-url="http://yoursite.com/2016/11/25/iframe/">
+      <div class="ds-thread" data-thread-key="2016/11/26/float/"
+           data-title="CSS Float 以及相关布局模式" data-url="http://yoursite.com/2016/11/26/float/">
       </div>
     
   </div>
@@ -596,7 +762,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe关于滚动条的去除和保留"><span class="nav-number">1.</span> <span class="nav-text">iframe关于滚动条的去除和保留</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一：去掉全部的滚动条"><span class="nav-number">1.1.</span> <span class="nav-text">一：去掉全部的滚动条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二：去掉右边的滚动条且保留底下的滚动条"><span class="nav-number">1.2.</span> <span class="nav-text">二：去掉右边的滚动条且保留底下的滚动条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三：去掉底下的滚动条且保留右边的滚动条"><span class="nav-number">1.3.</span> <span class="nav-text">三：去掉底下的滚动条且保留右边的滚动条</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-Float-以及相关布局模式"><span class="nav-number">1.</span> <span class="nav-text">CSS Float 以及相关布局模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#float-取值"><span class="nav-number">1.1.</span> <span class="nav-text">float 取值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#举个例子"><span class="nav-number">1.1.1.</span> <span class="nav-text">举个例子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#float的元素在同一文档流"><span class="nav-number">1.2.</span> <span class="nav-text">float的元素在同一文档流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#float元素半脱离文档流"><span class="nav-number">1.3.</span> <span class="nav-text">float元素半脱离文档流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clear"><span class="nav-number">1.4.</span> <span class="nav-text">clear</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用方式："><span class="nav-number">1.4.1.</span> <span class="nav-text">使用方式：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
