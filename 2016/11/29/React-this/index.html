@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="install,gulp," />
+  <meta name="keywords" content="react,this," />
 
 
 
@@ -86,37 +86,28 @@
 
 
 
-<meta name="description" content="安裝gulp1.安装  nodenode下载地址：http://nodejs.cn/download/ 安装比较简单，基本一直下一步即可，安装路径随意。安装完成后，终端输入如下命令 显示版本号即安装成功。
-node -v
-2.全局安装gulp执行
-npm install gulp -g
-检测gulp是否安装成功执行
-gulp -v
-显示版本号即安装成功 
-3.项目文件根目录新建package.js">
+<meta name="description" content="React开发中关于this的那些事儿在React开发，关于this以及es6中方法的书写及其使用出现一些问题
+
+在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window
+
+在es6中，为了规范function中t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gulp的简易安装流程">
-<meta property="og:url" content="http://yoursite.com/2016/11/16/gulp/index.html">
+<meta property="og:title" content="React开发中关于this的那些事儿">
+<meta property="og:url" content="http://yoursite.com/2016/11/29/React-this/index.html">
 <meta property="og:site_name" content="戌虚虚的博客">
-<meta property="og:description" content="安裝gulp1.安装  nodenode下载地址：http://nodejs.cn/download/ 安装比较简单，基本一直下一步即可，安装路径随意。安装完成后，终端输入如下命令 显示版本号即安装成功。
-node -v
-2.全局安装gulp执行
-npm install gulp -g
-检测gulp是否安装成功执行
-gulp -v
-显示版本号即安装成功 
-3.项目文件根目录新建package.js">
-<meta property="og:updated_time" content="2016-11-25T11:08:45.000Z">
+<meta property="og:description" content="React开发中关于this的那些事儿在React开发，关于this以及es6中方法的书写及其使用出现一些问题
+
+在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window
+
+在es6中，为了规范function中t">
+<meta property="og:updated_time" content="2016-11-29T11:16:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gulp的简易安装流程">
-<meta name="twitter:description" content="安裝gulp1.安装  nodenode下载地址：http://nodejs.cn/download/ 安装比较简单，基本一直下一步即可，安装路径随意。安装完成后，终端输入如下命令 显示版本号即安装成功。
-node -v
-2.全局安装gulp执行
-npm install gulp -g
-检测gulp是否安装成功执行
-gulp -v
-显示版本号即安装成功 
-3.项目文件根目录新建package.js">
+<meta name="twitter:title" content="React开发中关于this的那些事儿">
+<meta name="twitter:description" content="React开发中关于this的那些事儿在React开发，关于this以及es6中方法的书写及其使用出现一些问题
+
+在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window
+
+在es6中，为了规范function中t">
 
 
 
@@ -144,13 +135,13 @@ gulp -v
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/16/gulp/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/29/React-this/"/>
 
 
 
 
 
-  <title> gulp的简易安装流程 | 戌虚虚的博客 </title>
+  <title> React开发中关于this的那些事儿 | 戌虚虚的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -284,7 +275,7 @@ gulp -v
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/16/gulp/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/29/React-this/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="戌虚虚">
@@ -308,7 +299,7 @@ gulp -v
             
             
               
-                gulp的简易安装流程
+                React开发中关于this的那些事儿
               
             
           </h1>
@@ -320,8 +311,8 @@ gulp -v
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-16T16:12:22+08:00">
-              2016-11-16
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-29T17:25:02+08:00">
+              2016-11-29
             </time>
 
             &nbsp;|&nbsp;
@@ -329,8 +320,8 @@ gulp -v
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-25T19:08:45+08:00">
-              2016-11-25
+            <time title="Post modified" itemprop="dateModified" datetime="2016-11-29T19:16:44+08:00">
+              2016-11-29
             </time>
             
           </span>
@@ -341,8 +332,8 @@ gulp -v
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/16/gulp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/16/gulp/" itemprop="commentCount"></span>
+                <a href="/2016/11/29/React-this/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/29/React-this/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -352,7 +343,7 @@ gulp -v
 
           
           
-             <span id="/2016/11/16/gulp/" class="leancloud_visitors" data-flag-title="gulp的简易安装流程">
+             <span id="/2016/11/29/React-this/" class="leancloud_visitors" data-flag-title="React开发中关于this的那些事儿">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -377,45 +368,63 @@ gulp -v
       
 
       
-        <h2 id="安裝gulp"><a href="#安裝gulp" class="headerlink" title="安裝gulp"></a>安裝gulp</h2><h4 id="1-安装-node"><a href="#1-安装-node" class="headerlink" title="1.安装  node"></a>1.安装  node</h4><p>node下载地址：<a href="http://nodejs.cn/download/" target="_blank" rel="external">http://nodejs.cn/download/</a> 安装比较简单，基本一直下一步即可，安装路径随意。<br>安装完成后，终端输入如下命令 显示版本号即安装成功。</p>
-<pre><code>node -v
-</code></pre><h4 id="2-全局安装gulp"><a href="#2-全局安装gulp" class="headerlink" title="2.全局安装gulp"></a>2.全局安装gulp</h4><p>执行</p>
-<pre><code>npm install gulp -g
-</code></pre><p>检测gulp是否安装成功<br>执行</p>
-<pre><code>gulp -v
-</code></pre><p>显示版本号即安装成功 </p>
-<h4 id="3-项目文件根目录新建package-json"><a href="#3-项目文件根目录新建package-json" class="headerlink" title="3.项目文件根目录新建package.json"></a>3.项目文件根目录新建package.json</h4><p>注：package.json是基于nodejs项目必不可少的配置文件，它是存放在项目根目录的普通json文件重点内容</p>
-<p>1.先创建一个项目文件夹</p>
-<p>2.进入项目文件夹中</p>
-<p>3.运行</p>
-<pre><code>npm init
-</code></pre><p> 产出  package.json  的文件</p>
-<p>4.检测package.json是否成功新建</p>
-<p>查看项目文件根目录，是否新建package.json</p>
-<h4 id="本地安装gulp插件"><a href="#本地安装gulp插件" class="headerlink" title="本地安装gulp插件"></a>本地安装gulp插件</h4><p>注：全局安装gulp是为了执行gulp任务，本地安装gulp则是为了调用gulp插件的功能进入你的项目文件路径中后，执行</p>
-<pre><code>npm install gulp --save-dev 
-</code></pre><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>安装  gulp-jade  和  gulp-sass  （拿该插件进行示例）</p>
-<pre><code>npm install gulp-jade gulp-sass
-</code></pre><h4 id="新建gulpfile-js"><a href="#新建gulpfile-js" class="headerlink" title="新建gulpfile.js"></a>新建gulpfile.js</h4><p>注：gulpfile.js是gulp的配置文件，放于根目录中</p>
-<p>在gulpfile.js 引入插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 引入你所需要用到的插件 require(&quot;引入的插件名称&quot;);</div><div class="line">var jade = require(&quot;gulp-jade&quot;);</div><div class="line">var sass = require(&quot;gulp-sass&quot;);</div><div class="line">var gulp = require(&quot;gulp&quot;);</div></pre></td></tr></table></figure>
-<p>定制任务</p>
-<p>创建sass文件目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// 写任务 默认任务名 default</div><div class="line">gulp.task(&quot;sass&quot;,function()&#123;</div><div class="line">	gulp.src(&quot;sass/*.scss&quot;)		//获取该任务需要的文件</div><div class="line">	.pipe(sass())				//该任务调用的模块</div><div class="line">	.pipe(gulp.dest(&quot;css/&quot;))	//将在css文件夹中生成css文件</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//	默认任务</div><div class="line">gulp.task(&quot;default&quot;,[&quot;sass&quot;,&quot;watch&quot;]);</div><div class="line"></div><div class="line">//监听文件</div><div class="line">gulp.task(&quot;watch&quot;,function()&#123;</div><div class="line">	gulp.watch(&quot;sass/*.scss&quot;,[&quot;sass&quot;])	//监听sass文件里所有以‘*.scss’结尾的文件，修改时自动执行 sass 任务。</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h4 id="运行-gulp"><a href="#运行-gulp" class="headerlink" title="运行    gulp"></a>运行    gulp</h4><p>执行  gulp 任务名称    运行该任务 示例：gulp sass 执行gulpfile.js中的sass任务 </p>
-<p>执行    gulp    调用default中的所有任务 </p>
-<h4 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h4><p>sass的编译 (gulp-sass)</p>
-<p>less编译 （gulp-less）</p>
-<p>重命名（gulp-rename）</p>
-<p>自动添加css前缀（gulp-autoprefixer）</p>
-<p>压缩css（gulp-clean-css）</p>
-<p>js代码校验（gulp-jshint）</p>
-<p>合并js文件（gulp-concat）</p>
-<p>压缩js代码（gulp-uglify）</p>
-<p>压缩图片（gulp-imagemin）</p>
-<p>自动刷新页面（gulp-livereload，谷歌浏览器亲测，谷歌浏览器需安装livereload插件）</p>
-<p>图片缓存，只有图片替换了才压缩（gulp-cache）</p>
-<p>更改提醒（gulp-notify）</p>
+        <h2 id="React开发中关于this的那些事儿"><a href="#React开发中关于this的那些事儿" class="headerlink" title="React开发中关于this的那些事儿"></a>React开发中关于this的那些事儿</h2><p>在React开发，关于this以及es6中方法的书写及其使用出现一些问题</p>
+<ul>
+<li><p>在es5中, 普通用function声明的函数是定义在window对象上的，显而易见其内部的this肯定是默认指向window对象。而直接用函数名来调用得到的函数内this也是window对象。可以这么理解，那个看不见的调用者就是window</p>
+</li>
+<li><p>在es6中，为了规范function中this的所属问题，在使用‘use strict’模式下，不显示地用window对象调用函数则其内部的this为undefined，也就是强制你使用window对象严格得去调用。</p>
+</li>
+</ul>
+<h4 id="与this相关的-bind-call-apply-三兄弟"><a href="#与this相关的-bind-call-apply-三兄弟" class="headerlink" title="与this相关的 bind call apply 三兄弟"></a>与this相关的 bind call apply 三兄弟</h4><ol>
+<li>bind通常用来重新绑定函数体中的this并返回一个具有指定this的函数。</li>
+<li><p>call 和 apply 则表示重新指定this并调用返回结果，区别在于call采用多个实参的方式传参，apply则是使用一个数组。</p>
+<p> 共同点: 在于第一个参数指定为this(这里用对象描述比较合理些)，作用都是用来重定向this；从第二个参数起都算作是参数传递。</p>
+<p> 不同点: [1] 是用来返回具有特定this的函数，[2] 是用来调用函数的。而对于函数的获得，则通过其声明宿主(指所在对象，并非es6中的class类。在es6中，class和Java的类似，想要调用需要创建对象)</p>
+</li>
+</ol>
+<h4 id="React中的bind"><a href="#React中的bind" class="headerlink" title="React中的bind"></a>React中的bind</h4><p>准确说，应该是es6中bind的使用，但因为在开发中常用到，就暂且以React开发为背景。<br>因为是返回指定this的函数，因此它的应用场景一定是函数的传递，而非函数的普通调用。在开发中，函数的传递赋值主要有以下几个场景(如有遗漏，欢迎补充)：</p>
+<ul>
+<li>组件属性：组件内部函数的回调，通过把一个函数传递给组件的props，本质上和把函数作为实参传递给被调用函数是一致的。(至于是在Jsx中虚拟Dom中传递还是通过<code>createElement</code>、<code>cloneElement</code>等React API就不多说了)</li>
+<li>高阶函数：本质上也是一种回调，就是在调用的地方提前写好即将被调用的函数并传进去，这里的‘即将’既可以是同步也可以是异步。</li>
+</ul>
+<p>在以上两种情况中，组件的属性对this的依赖还是比较大的</p>
+<p>当我们给组件属性所传递的函数中，需要使用到当前类中非静态函数或字段(这两种成员都归属于this)时就不得不使用this来调用。</p>
+<h4 id="使用场景一"><a href="#使用场景一" class="headerlink" title="使用场景一"></a>使用场景一</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class Foo extends Component&#123;</div><div class="line">	render () &#123;</div><div class="line">		return &lt;CustomView onPress=&#123;this.readBook&#125; /&gt;</div><div class="line">	&#125;</div><div class="line">	readBook () &#123;</div><div class="line">		let bookName = this.getBookName()</div><div class="line">		this.props.ooxx</div><div class="line">		this.state.ooxx</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上代码在运行时，由于<code>this.readBook</code>传递了一个纯函数，而该函数在CustomView类中执行时，this会被指向当前类CustomView的实例this,显而易见此时的foo、props、ooxx显然在另外一个类中是找不到的，<code>undefined</code>这个老朋友的如约而至也成为必然。</p>
+<p>此时我们只需要改写传入方式为<code>this.readBook.bind(this)</code>即可将当前this绑定到readBook中，当然也可以绑定其他你所想要的，只要符合你的需求。</p>
+<h4 id="使用场景二"><a href="#使用场景二" class="headerlink" title="使用场景二"></a>使用场景二</h4><p>由于让函数调用bind会返回一个全新的函数，因此在高阶函数的某些场景下就会因为不是同一个函数(准确说是引用) 而导致出错，如监听器的注册与注销:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class PauseMenu extends Component &#123;</div><div class="line">	constructor (props) &#123;</div><div class="line">		super(props);</div><div class="line">		this._onAppPaused = this.onAppPaused.bind(this); </div><div class="line">	&#125; </div><div class="line">	componentWillMount () &#123;</div><div class="line">		AppStateIOS.addEventListener(&apos;change&apos;, this._onAppPaused); </div><div class="line">	&#125;</div><div class="line">	componentDidUnmount () &#123;</div><div class="line">		AppStateIOS.removeEventListener(</div><div class="line">			&apos;change&apos;, this._onAppPaused</div><div class="line">		)</div><div class="line">	&#125;</div><div class="line">	onAppPaused(event)&#123; </div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看到我们在构造函数里为onAppPaused函数单独绑定了this并存到当前this当中，这样在注册和注销的时候都可以保证拿到的是同一个函数对象。(这里需要注意，_onAppPaused是直接定义在this上的，因此在针对一个class new出实例后，_onAppPaused是属于实例的，而onAppPaused是定义在类里的非静态函数，在类的prototype上，实例的<em>proto</em>原型上的。)</p>
+<h4 id="在bind时传参数"><a href="#在bind时传参数" class="headerlink" title="在bind时传参数"></a>在bind时传参数</h4><p>这个需求，就我个人来讲是一个非常不合理的需求。高阶函数本来就是传入一个方法签名，而你非要利用bind的附加参数功能有点‘乱来’的意思了。不过也不是不可以，只需要注意此时如果在高阶函数内(或组件内) 的方法回调中本身带有参数，则在bind时禁止附加参数，否则会覆盖原有的回调参数。</p>
+<h4 id="Lambda表达式与匿名函数"><a href="#Lambda表达式与匿名函数" class="headerlink" title="Lambda表达式与匿名函数"></a>Lambda表达式与匿名函数</h4><p>Lambda表达式是es6中函数的一种新的声明方式，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">() =&gt; &#123;</div><div class="line">	console.log(...)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上是一个简单的Lambda表达式，在多数的Js教程中都被称作”箭头函数”，它的书面写法上等价于匿名函数，如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function () &#123;</div><div class="line">	console.log(...)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>他们都可以被用来在<code>高阶函数</code>以及<code>组件属性</code>上以及<code>普通方法</code>的定义，然而又有一些差异:</p>
+<ul>
+<li>Lambda表达式中的this指向当前作用域的this，因此这种情况下就没有bind的事情了，因为Lambda已经有自己的this了。同bind一样，Lambda同样会返回一个全新的函数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;() =&gt; this.props...&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>此时呢，Lambda表达式是直接作为回调被赋值了。因此所有的回调参数都可以在此获取到，后续与this相关的逻辑代码都可以在Lambda表达式中书写。</p>
+<ul>
+<li>匿名函数会因为es5、6的情况而指向window或者undefined，此时如果方法体内需要用到当前的组件的this，则可以通过bind来完成，如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;function()&#123;</div><div class="line">	this.props...</div><div class="line">&#125;.bind(this)&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>这样的代码等价于使用函数名bind this一样，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;this.readProps.bind(this)&#125; /&gt;</div><div class="line">...</div><div class="line">readProps () &#123;</div><div class="line">	this.props...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果上边的<code>readProps</code>的回调没有传出一些特别的参数，也可以用Lambda表达式改为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;CustomView onPress=&#123;() =&gt; this.readProps()&#125; /&gt;</div></pre></td></tr></table></figure>
+<p>当然，这只是用箭头函数包裹了一下，我们仍然可以通过在箭头函数的参数列表中声明参数的方式来达到相同的目的。</p>
+<h4 id="使用Lambda表达式优化"><a href="#使用Lambda表达式优化" class="headerlink" title="使用Lambda表达式优化"></a>使用Lambda表达式优化</h4><p>之前提到了用bind在this中存留一份，可以在构造函数里用对象的属性来存储唯一的函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class PauseMenu extends Component &#123;</div><div class="line">	componentWillMount () &#123;</div><div class="line">		AppStateIOS.addEventListener(&apos;change&apos;, this._onAppPaused); </div><div class="line">	&#125;</div><div class="line">	componentDidUnmount () &#123;</div><div class="line">		AppStateIOS.removeEventListener(&apos;change&apos;, this._onAppPaused)</div><div class="line">	&#125;</div><div class="line">	_onAppPaused ＝ (event) =&gt; &#123; </div><div class="line">	&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样做可以将_onAppPaused 作为类属性的一部分，就不用担心拿不到方法的唯一引用啦</p>
+<h4 id="Lambda表达式补充："><a href="#Lambda表达式补充：" class="headerlink" title="Lambda表达式补充："></a>Lambda表达式补充：</h4><ol>
+<li>箭头后的部分即为表达式的返回值</li>
+<li>如果出现多条语句操作运算的，需要使用{…} 以函数体的形式书写并以显示的方式<code>return</code>返回值</li>
+<li>如果需要直接返回一个Object的话，语法上会和函数体冲突，此时就必须使用<code>()</code>保护一下，声明此处是一个对象而非函数体</li>
+<li>参数方面，单参数可以不加<code>()</code>括弧, 但是一个以上就必须要加了。同时没有参数时需要使用<code>()</code>来完成语法上的补位</li>
+</ol>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>在日常开发中，this还是一个让人比较头疼的东西。方法(对象中的函数) 内函数会导致this的重定向，其他的一些对象嵌套也会导致重定向问题，因此大家不要慌，不妨尝试手动获取一下外部this。</p>
 
       
     </div>
@@ -439,9 +448,9 @@ gulp -v
       
         <div class="post-tags">
           
-            <a href="/tags/install/" rel="tag"># install</a>
+            <a href="/tags/react/" rel="tag"># react</a>
           
-            <a href="/tags/gulp/" rel="tag"># gulp</a>
+            <a href="/tags/this/" rel="tag"># this</a>
           
         </div>
       
@@ -450,8 +459,8 @@ gulp -v
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/14/hexo/" rel="next" title="hexo,搭建属于自己的博客">
-                <i class="fa fa-chevron-left"></i> hexo,搭建属于自己的博客
+              <a href="/2016/11/28/lazyload/" rel="next" title="关于图片的懒加载">
+                <i class="fa fa-chevron-left"></i> 关于图片的懒加载
               </a>
             
           </div>
@@ -459,10 +468,6 @@ gulp -v
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/17/react-native-icons/" rel="prev" title="react-native-icons的简单使用">
-                react-native-icons的简单使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -488,8 +493,8 @@ gulp -v
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/16/gulp/"
-           data-title="gulp的简易安装流程" data-url="http://yoursite.com/2016/11/16/gulp/">
+      <div class="ds-thread" data-thread-key="2016/11/29/React-this/"
+           data-title="React开发中关于this的那些事儿" data-url="http://yoursite.com/2016/11/29/React-this/">
       </div>
     
   </div>
@@ -628,7 +633,7 @@ gulp -v
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝gulp"><span class="nav-number">1.</span> <span class="nav-text">安裝gulp</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装-node"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.安装  node</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-全局安装gulp"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.全局安装gulp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-项目文件根目录新建package-json"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.项目文件根目录新建package.json</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地安装gulp插件"><span class="nav-number">1.0.4.</span> <span class="nav-text">本地安装gulp插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装插件"><span class="nav-number">1.0.5.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建gulpfile-js"><span class="nav-number">1.0.6.</span> <span class="nav-text">新建gulpfile.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行-gulp"><span class="nav-number">1.0.7.</span> <span class="nav-text">运行    gulp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用插件"><span class="nav-number">1.0.8.</span> <span class="nav-text">常用插件</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React开发中关于this的那些事儿"><span class="nav-number">1.</span> <span class="nav-text">React开发中关于this的那些事儿</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#与this相关的-bind-call-apply-三兄弟"><span class="nav-number">1.0.1.</span> <span class="nav-text">与this相关的 bind call apply 三兄弟</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#React中的bind"><span class="nav-number">1.0.2.</span> <span class="nav-text">React中的bind</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用场景一"><span class="nav-number">1.0.3.</span> <span class="nav-text">使用场景一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用场景二"><span class="nav-number">1.0.4.</span> <span class="nav-text">使用场景二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在bind时传参数"><span class="nav-number">1.0.5.</span> <span class="nav-text">在bind时传参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lambda表达式与匿名函数"><span class="nav-number">1.0.6.</span> <span class="nav-text">Lambda表达式与匿名函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Lambda表达式优化"><span class="nav-number">1.0.7.</span> <span class="nav-text">使用Lambda表达式优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lambda表达式补充："><span class="nav-number">1.0.8.</span> <span class="nav-text">Lambda表达式补充：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结语"><span class="nav-number">1.0.9.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
