@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -86,40 +86,31 @@
 
 
 
-<meta name="description" content="正文：hexo是一款基于Node.js的静态博客框架，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。
-配置环境：安装Node （必须）
-作用：用来生成静态页面的
-到Node.js官网下载相应平台的最新版本，一路安装即可。
-安装Git（必须）
-作用：把本地的hexo内容提交到github上去。
-安装Xcode就自带有Git，我就不多说了。
-申请GitHub（必须）
-作用：">
+<meta name="description" content="深入理解display属性前面的话
+display属性在网页布局中非常常见，但经常用到的仅仅是block、inline-block、inline和none等寥寥几个属性值，本文将详细介绍display属性的各个方面
+定义
+display属性用于规定元素生成的框类型，影响显示方式
+　　值: none 、 inline 、 block 、 inline-block 、 list-item 、 run-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo,搭建属于自己的博客">
-<meta property="og:url" content="http://yoursite.com/2016/11/14/hexo/index.html">
+<meta property="og:title" content="深入理解display属性">
+<meta property="og:url" content="http://yoursite.com/2016/12/08/display/index.html">
 <meta property="og:site_name" content="戌虚虚的博客">
-<meta property="og:description" content="正文：hexo是一款基于Node.js的静态博客框架，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。
-配置环境：安装Node （必须）
-作用：用来生成静态页面的
-到Node.js官网下载相应平台的最新版本，一路安装即可。
-安装Git（必须）
-作用：把本地的hexo内容提交到github上去。
-安装Xcode就自带有Git，我就不多说了。
-申请GitHub（必须）
-作用：">
-<meta property="og:updated_time" content="2016-11-14T11:54:52.000Z">
+<meta property="og:description" content="深入理解display属性前面的话
+display属性在网页布局中非常常见，但经常用到的仅仅是block、inline-block、inline和none等寥寥几个属性值，本文将详细介绍display属性的各个方面
+定义
+display属性用于规定元素生成的框类型，影响显示方式
+　　值: none 、 inline 、 block 、 inline-block 、 list-item 、 run-">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw1024/005WybULgw1fajlbb0mqzj304i017q2p.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw1024/005WybULgw1fajlbb0a8xj302201ojr5.jpg">
+<meta property="og:updated_time" content="2016-12-08T11:19:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo,搭建属于自己的博客">
-<meta name="twitter:description" content="正文：hexo是一款基于Node.js的静态博客框架，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。
-配置环境：安装Node （必须）
-作用：用来生成静态页面的
-到Node.js官网下载相应平台的最新版本，一路安装即可。
-安装Git（必须）
-作用：把本地的hexo内容提交到github上去。
-安装Xcode就自带有Git，我就不多说了。
-申请GitHub（必须）
-作用：">
+<meta name="twitter:title" content="深入理解display属性">
+<meta name="twitter:description" content="深入理解display属性前面的话
+display属性在网页布局中非常常见，但经常用到的仅仅是block、inline-block、inline和none等寥寥几个属性值，本文将详细介绍display属性的各个方面
+定义
+display属性用于规定元素生成的框类型，影响显示方式
+　　值: none 、 inline 、 block 、 inline-block 、 list-item 、 run-">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/mw1024/005WybULgw1fajlbb0mqzj304i017q2p.jpg">
 
 
 
@@ -147,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/14/hexo/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/08/display/"/>
 
 
 
 
 
-  <title> hexo,搭建属于自己的博客 | 戌虚虚的博客 </title>
+  <title> 深入理解display属性 | 戌虚虚的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +278,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/14/hexo/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/08/display/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="戌虚虚">
@@ -311,7 +302,7 @@
             
             
               
-                hexo,搭建属于自己的博客
+                深入理解display属性
               
             
           </h1>
@@ -323,8 +314,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-14T19:54:16+08:00">
-              2016-11-14
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-08T11:00:12+08:00">
+              2016-12-08
             </time>
 
             &nbsp;|&nbsp;
@@ -332,8 +323,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-11-14T19:54:52+08:00">
-              2016-11-14
+            <time title="Post modified" itemprop="dateModified" datetime="2016-12-08T19:19:37+08:00">
+              2016-12-08
             </time>
             
           </span>
@@ -344,8 +335,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/14/hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/14/hexo/" itemprop="commentCount"></span>
+                <a href="/2016/12/08/display/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/display/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -355,7 +346,7 @@
 
           
           
-             <span id="/2016/11/14/hexo/" class="leancloud_visitors" data-flag-title="hexo,搭建属于自己的博客">
+             <span id="/2016/12/08/display/" class="leancloud_visitors" data-flag-title="深入理解display属性">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -380,121 +371,122 @@
       
 
       
-        <h4 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h4><p><strong>hexo</strong>是一款基于Node.js的静态博客框架，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。</p>
-<h3 id="配置环境："><a href="#配置环境：" class="headerlink" title="配置环境："></a>配置环境：</h3><p>安装Node （必须）</p>
-<p>作用：用来生成静态页面的</p>
-<p>到<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js官网</a>下载相应平台的最新版本，一路安装即可。</p>
-<p>安装Git（必须）</p>
-<p>作用：把本地的hexo内容提交到github上去。</p>
-<p>安装Xcode就自带有Git，我就不多说了。</p>
-<p>申请GitHub（必须）</p>
-<p>作用：是用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。</p>
-<p><a href="https://github.com/" target="_blank" rel="external">github</a>账号我也不再啰嗦了,没有的话直接申请就行了，跟一般的注册账号差不多，SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，怎么配置我就不多说了，网上有很多教程。</p>
-<h3 id="正式安装Hexo"><a href="#正式安装Hexo" class="headerlink" title="正式安装Hexo"></a>正式安装Hexo</h3><p>Node和Git都安装好后,首先创建一个文件夹,如blog,用户存放hexo的配置文件,然后进入blog里安装Hexo。</p>
-<p>执行如下命令安装Hexo：</p>
-<p><strong>sudo npm install -g hexo</strong></p>
-<p>初始化然后，执行init命令初始化hexo,命令：</p>
-<p><strong>hexo init</strong></p>
-<p>好啦，至此，全部安装工作已经完成！blog就是你的博客根目录，所有的操作都在里面进行。</p>
-<p>生成静态页面</p>
-<p><strong>hexo generate</strong>（hexo g也可以）</p>
-<p>本地启动</p>
-<p>启动本地服务，进行文章预览调试，命令：</p>
-<p><strong>hexo server</strong></p>
-<p>浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
-<p>我不知道你们能不能，反正我不能，因为我还有环境没配置好</p>
-<h3 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h3><p>建立Repository</p>
-<p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法</p>
-<p>然后建立关联，我的blog在本地/Users/leopard/blog，blog是我之前建的东西也全在这里面，有：</p>
-<p> <strong>_config.yml</strong>    <strong>node_modules</strong>    <strong>public</strong>      <strong>source</strong></p>
-<pre><code>**db.json**        **package.json**    **scaffolds**  **themes**
-</code></pre><p>现在我们需要<strong>_config.yml</strong>文件，来建立关联，命令：</p>
-<p><strong>vim _config.yml</strong></p>
-<p>翻到最下面，改成我这样子的</p>
-<pre><code>deploy:
-
-  type: git
-
-
-  repository: https://github.com/xxxxxx/xxxxxx.github.io.git
-  (xxxxxx改为你的github用户名)
-
-  branch: master
-</code></pre><p>然后执行命令：</p>
-<p><strong>npm install hexo-deployer-git –save</strong></p>
-<p>网上会有很多说法，有的type是github, 还有repository最后面的后缀也不一样，是github.com.git，我也踩了很多坑，我现在的版本是hexo: 3.1.1，执行命令hexo -vsersion就出来了,貌似3.0后全部改成我上面这种格式了。</p>
-<p>忘了说了，我没用SSH Keys如果你用了SSH Keys的话直接在github里复制SSH的就行了，总共就两种协议，相信你懂的。</p>
-<p>然后，执行配置命令：</p>
-<p><strong>hexo deploy</strong></p>
-<p>然后再浏览器中输入<a href="http://xxxxxx.github.io/" target="_blank" rel="external">http://xxxxxx.github.io/</a> 就行了，把这里的‘xxxxxx’改成你github的账户名就行了<br>部署步骤</p>
-<p>每次部署的步骤，可按以下三步来进行。</p>
-<pre><code>**hexo clean**
-
-**hexo generate**
-
-**hexo deploy**
-</code></pre><p>一些常用命令：</p>
-<p><strong>hexo new”postName”</strong> #新建文章</p>
-<p><strong>hexo new page”pageName”</strong> #新建页面</p>
-<p><strong>hexo generate</strong> #生成静态页面至public目录</p>
-<p><strong>hexo server</strong> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</p>
-<p><strong>hexo deploy</strong> #将.deploy目录部署到GitHub</p>
-<p><strong>hexo help</strong> # 查看帮助</p>
-<p><strong>hexo version</strong> #查看Hexo的版本</p>
-<h3 id="报错总结"><a href="#报错总结" class="headerlink" title="报错总结"></a>报错总结</h3><p><strong>ERROR Deployer not found: git</strong> 或者 <strong>ERROR Deployer not found: github</strong></p>
-<p>解决方法： <strong>npm install hexo-deployer-git –save</strong></p>
-<p>如发生报错： <strong>ERROR Process failed: layout/.DS_Store</strong> , 那么进入主题里面layout和_partial目录下，使用删除命令：</p>
-<p><strong>rm-rf.DS_Store</strong></p>
-<p>ERROR Plugin load failed: hexo-server</p>
-<p>原因：</p>
-<p>Besides,utilities are separated into a standalone module.hexo.util is not reachable anymore.</p>
-<p>解决方法，执行命令：</p>
-<p>sudo npm install hexo-server</p>
-<p>执行命令hexo server，提示：Usage: hexo ….</p>
-<p>原因：</p>
-<p>我认为是没有生成本地服务</p>
-<p>解决方法，执行命令：</p>
-<p>npm install hexo-server –save</p>
-<p>提示：hexo-server@0.1.2 node_modules/hexo-server</p>
-<p>….</p>
-<p>表示成功了<a href="https://hexo.io/zh-cn/docs/server.html" target="_blank" rel="external">参考</a></p>
-<p>这个时候再执行：</p>
-<p>hexo-server</p>
-<p>得到:</p>
-<p>INFOHexois running at <a href="http://127.0.0.1:4000/.PressCtrl+C" target="_blank" rel="external">http://127.0.0.1:4000/.PressCtrl+C</a> to stop.</p>
-<p>这个时候再点击<a href="http://127.0.0.1:4000" target="_blank" rel="external">http://127.0.0.1:4000</a>，正常情况下应该是最原始的画面，如果你看到的是：</p>
-<p>白板和Cannot GET / 几个字</p>
-<p>原因：</p>
-<p>由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：</p>
-<p>npm install hexo-renderer-ejs –save</p>
-<p>npm install hexo-renderer-stylus –save</p>
-<p>npm install hexo-renderer-marked –save</p>
-<p>这个时候再重新生成静态文件，命令：</p>
-<p>hexo generate（或hexo g）</p>
-<p>启动本地服务器：</p>
-<p>hexo server（或hexo s）</p>
-<p>再，点击网址<a href="http://127.0.0.1:4000" target="_blank" rel="external">http://127.0.0.1:4000</a>OK终于可以看到属于你自己的blog啦，😄，虽然很简陋，但好歹有了一个属于自己的小窝了。参考链接，本地已经简单的设置好了，但是现在域名和服务器都是基于自己的电脑，接下来需要跟github进行关联。</p>
-<h3 id="主题推荐"><a href="#主题推荐" class="headerlink" title="主题推荐"></a>主题推荐</h3><p>这里有大量的<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a>使用方法里面</p>
-<p>都有详细的介绍，我就不多说了。</p>
-<p>我这里有几款个人认为不错的主题，免去你们，一个一个的选了，欢迎吐槽我的审美，😄</p>
-<p>Cover- A chic theme with facebook-like cover photo</p>
-<p>Oishi- A white theme based on Landscape plus and Writing.</p>
-<p>Sidebar- Another theme based on Light with a simple sidebar</p>
-<p>TKL- A responsive design theme for Hexo. 一个设计优雅的响应式主题</p>
-<p>Tinnypp- A clean, simple theme based on Tinny</p>
-<p>Writing- A small and simple hexo theme based on Light</p>
-<p>Yilia- Responsive and simple style 优雅简洁响应式主题，我用得就是这个。</p>
-<p>Pacman voidy- A theme with dynamic tagcloud and dynamic snow</p>
-<h4 id="一些基本路径"><a href="#一些基本路径" class="headerlink" title="一些基本路径"></a>一些基本路径</h4><p>文章在source/_posts, 文章支持Markdown语法，可以使用一些MarkDown渲染工具。如果想修改头像可以直接在主题的_config.yml文件里面修改，友情链接，之类的都在这里。开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。</p>
-<p>###修改头像<br>我当前的路径/Users/leopard/blog/themes/yilia，ls 你可以看到</p>
-<p><strong>Gruntfile.js</strong>    <strong>_config.yml</strong>    <strong>package.json</strong></p>
-<p><strong>README.md</strong>  <strong>layout</strong>     <strong>source</strong></p>
-<p>vim _config.yml 进去，找到 #你的头像url avatar: 后接一个URL就行了，头像就修改成功了</p>
-<p>部署 hexo g</p>
-<p>提交 hexo d</p>
-<p>###Markdown语法参考链接</p>
-<p><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">链接</a></p>
-<p>转载自 潘柏信的博客：<a href="http://leopardpan.github.io,搭建属于自己的博客" target="_blank" rel="external">http://leopardpan.github.io,搭建属于自己的博客</a></p>
+        <h2 id="深入理解display属性"><a href="#深入理解display属性" class="headerlink" title="深入理解display属性"></a>深入理解display属性</h2><h3 id="前面的话"><a href="#前面的话" class="headerlink" title="前面的话"></a>前面的话</h3><hr>
+<p>display属性在网页布局中非常常见，但经常用到的仅仅是block、inline-block、inline和none等寥寥几个属性值，本文将详细介绍display属性的各个方面</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><hr>
+<p>display属性用于规定元素生成的框类型，影响显示方式</p>
+<p>　　值: none 、 inline 、 block 、 inline-block 、 list-item 、 run-in 、 table 、 inline-table 、 table-row-group 、 table-header-group 、 table-footer-group 、 table-row 、 table-colume-group 、 table-column 、 table-cell 、 table-caption 、 inherit</p>
+<p>　　初始值: inline</p>
+<p>　　应用于: 所有元素</p>
+<p>　　继承性: 无</p>
+<p>　　[注意]IE7-浏览器不支持table类属性值及inherit
+　　</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><hr>
+<h4 id="block"><a href="#block" class="headerlink" title="block"></a>block</h4><p><strong>【特征】</strong></p>
+<ol>
+<li>不设置宽度时，宽度撑满一行</li>
+<li>独占一行</li>
+<li>支持宽高</li>
+</ol>
+<p><strong>【标签】</strong></p>
+<pre><code>&lt;address&gt;、&lt;article&gt;、&lt;aside&gt;、&lt;blockquote&gt;、&lt;body&gt;、&lt;dd&gt;、&lt;details&gt;、&lt;div&gt;、&lt;dl&gt;、&lt;dt&gt;、&lt;fieldset&gt;、&lt;figcaption&gt;、&lt;figure&gt;、&lt;footer&gt;、&lt;form&gt;、&lt;h1&gt;、&lt;header&gt;、&lt;hgroup&gt;、&lt;hr&gt;、&lt;html&gt;、&lt;legend&gt;、&lt;menuitem&gt;、&lt;nav&gt;、&lt;ol&gt;、&lt;optgroup&gt;、&lt;option&gt;、&lt;p&gt;、&lt;section&gt;、&lt;summary&gt;、&lt;ul&gt;
+</code></pre><p><strong>【注意】</strong> menuitem标签只有firefox支持</p>
+<p><strong>【不支持的样式】</strong></p>
+<ol>
+<li>vertical-align</li>
+</ol>
+<h4 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h4><p><strong>【特征】</strong></p>
+<ol>
+<li>内容撑开宽度</li>
+<li>非独占一行</li>
+<li>不支持宽高</li>
+<li>代码换行被解析成空格</li>
+</ol>
+<p><strong>【标签】</strong></p>
+<pre><code>&lt;a&gt;&lt;abbr&gt;&lt;area&gt;&lt;b&gt;&lt;bdi&gt;&lt;bdo&gt;&lt;br&gt;&lt;cite&gt;&lt;code&gt;&lt;del&gt;&lt;dfn&gt;&lt;em&gt;&lt;i&gt;&lt;ins&gt;&lt;kbd&gt;&lt;label&gt;&lt;map&gt;&lt;mark&gt;&lt;output&gt;&lt;pre&gt;&lt;q&gt;&lt;rp&gt;&lt;rt&gt;&lt;ruby&gt;&lt;s&gt;&lt;smap&gt;&lt;small&gt;&lt;span&gt;&lt;strong&gt;&lt;sub&gt;&lt;sup&gt;&lt;time&gt;&lt;u&gt;&lt;var&gt;&lt;wbr&gt;
+</code></pre><p><strong>【不支持的样式】</strong></p>
+<ol>
+<li>background-position</li>
+<li>clear</li>
+<li>clip</li>
+<li>height | max-height | min-height</li>
+<li>width | max-width | min-width</li>
+<li>overflow</li>
+<li>text-align</li>
+<li>text-indent</li>
+<li>text-overflow</li>
+</ol>
+<h4 id="inline-block"><a href="#inline-block" class="headerlink" title="inline-block"></a>inline-block</h4><p><strong>【特征】</strong></p>
+<ol>
+<li>不设置宽度时，内容撑开宽度</li>
+<li>非独占一行</li>
+<li>支持宽高</li>
+<li>代码换行被解析成空格</li>
+</ol>
+<p><strong>【标签】</strong></p>
+<pre><code>&lt;audio&gt;、&lt;button&gt;、&lt;canvas&gt;、&lt;embed&gt;、&lt;iframe&gt;、&lt;img&gt;、&lt;input&gt;、&lt;keygen&gt;、&lt;meter&gt;、&lt;object&gt;、&lt;progress&gt;、&lt;select&gt;、&lt;textarea&gt;、&lt;video&gt;
+</code></pre><p><strong>【不支持的样式】</strong></p>
+<ol>
+<li>clear</li>
+</ol>
+<p><strong>【IE兼容】</strong></p>
+<p>　　IE7-浏览器不支持给块级元素设置inline-block样式，解决方法如下：首先将其变成行内元素，使用具有行内元素的特性，然后触发haslayout，使其具有块级元素的特性，如此就可以模拟出inline-block的效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">	display:inline-block;</div><div class="line">	*display: inline;</div><div class="line">	zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>[注意]</strong> 关于inline-block元素底部空隙的问题移步到此</p>
+<h4 id="none"><a href="#none" class="headerlink" title="none"></a>none</h4><p><strong>【特征】</strong></p>
+<ol>
+<li>隐藏元素并脱离文档流</li>
+</ol>
+<p><strong>【标签】</strong></p>
+<pre><code>&lt;base&gt;、&lt;link&gt;、&lt;meta&gt;、&lt;title&gt;、&lt;datalist&gt;、&lt;dialog&gt;、&lt;param&gt;、&lt;script&gt;、&lt;source&gt;、&lt;style&gt;
+</code></pre><h4 id="list-item"><a href="#list-item" class="headerlink" title="list-item"></a>list-item</h4><p><strong>【特征】</strong></p>
+<ol>
+<li>不设置宽度时，宽度撑满一行</li>
+<li>独占一行</li>
+<li>支持宽高</li>
+</ol>
+<h4 id="run-in"><a href="#run-in" class="headerlink" title="run-in"></a>run-in</h4><p>　　run-in是一个有意思的块/行内元素混合，可以使某些块级元素成为下一个元素的行内部分。如果一个元素生成run-in框，而且该框后面是一个块级框，那么该run-in元素将成为块级框开始处的一个行内框，run-in框格式化成另一个元素中的行内框，但它们仍从文档中的父元素继承属性</p>
+<p><strong>[注意]</strong>只有safari和IE8+支持</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;h3 style=&quot;display:run-in&quot;&gt;run-in test&lt;/h3&gt;</div><div class="line">&lt;p&gt;paragraph&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/mw1024/005WybULgw1fajlbb0mqzj304i017q2p.jpg" alt="Mou"></p>
+<p>若run-in框后面不是块级框时，run-in框本身将成为块级框</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;span style=&quot;display:run-in&quot;&gt;run-in test&lt;/span&gt;</div><div class="line">&lt;span&gt;paragraph&lt;/span&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://ww2.sinaimg.cn/mw1024/005WybULgw1fajlbb0a8xj302201ojr5.jpg" alt="Mou"></p>
+<h4 id="表格类元素"><a href="#表格类元素" class="headerlink" title="表格类元素"></a>表格类元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">table&#123;display: table;&#125;</div><div class="line">thead&#123;display: table-header-group;&#125;</div><div class="line">tbody&#123;display: table-row-group;&#125;</div><div class="line">tfoot&#123;display: table-footer-group;&#125;</div><div class="line">tr&#123;display: table-row;&#125;</div><div class="line">td,th&#123;display: table-cell;&#125;</div><div class="line">col&#123;display: table-column;&#125;</div><div class="line">colgroup&#123;display: table-column-group;&#125;</div><div class="line">caption&#123;display: table-caption;&#125;</div></pre></td></tr></table></figure>
+<p>表格类元素的display共有以上几种，&lt;thead&gt;&lt;tbody&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;col&gt;&lt;colgroup&gt;因为无法设置margin和padding用的较少，下面将着重介绍下&lt;table&gt;、&lt;td&gt;、&lt;th&gt;、&lt;caption&gt;这四个标签对应的display属性</p>
+<h4 id="table"><a href="#table" class="headerlink" title="table"></a>table</h4><p><strong>【特征】</strong></p>
+<ol>
+<li>不设置宽度时，宽度由内容撑开</li>
+<li>独占一行</li>
+<li>支持宽高</li>
+<li>默认具有表格特征，可设置table-layout、border-collapse、border-spacing等表格专有属性</li>
+</ol>
+<h4 id="inline-table"><a href="#inline-table" class="headerlink" title="inline-table"></a>inline-table</h4><p><strong>【特征】</strong></p>
+<ol>
+<li>不设置宽度时，宽度由内容撑开</li>
+<li>非独占一行</li>
+<li>支持宽高</li>
+<li>默认具有表格特征，可设置table-layout、border-collapse、border-spacing等表格专有属性</li>
+</ol>
+<h4 id="table-cell"><a href="#table-cell" class="headerlink" title="table-cell"></a>table-cell</h4><p><strong>【特征】</strong></p>
+<ol>
+<li>不设置宽度时，宽度由内容撑开</li>
+<li>非独占一行</li>
+<li>支持宽高</li>
+<li>垂直对齐</li>
+<li>同级等高</li>
+</ol>
+<h3 id="table-caption"><a href="#table-caption" class="headerlink" title="table-caption"></a>table-caption</h3><p><strong>【特征】</strong></p>
+<ol>
+<li>不设置宽度时，宽度由内容撑开</li>
+<li>独占一行</li>
+<li>支持宽高</li>
+</ol>
+<p><strong>注意事项</strong></p>
+<ol>
+<li>如果一个元素是绝对定位元素，float的值设置为none，对于浮动元素或绝对定位元素，计算值由声明值确定</li>
+<li>对于根元素，如果声明为值inline-table或table，都会得到计算值table，声明为none时则会得到同样的计算值none，所有其他display值都计算为block</li>
+</ol>
 
       
     </div>
@@ -516,19 +508,13 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/14/mou/" rel="next" title="Mou 书写格式">
-                <i class="fa fa-chevron-left"></i> Mou 书写格式
+              <a href="/2016/12/04/Web/" rel="next" title="为什么整个互联网行业都缺前端工程师？">
+                <i class="fa fa-chevron-left"></i> 为什么整个互联网行业都缺前端工程师？
               </a>
             
           </div>
@@ -536,10 +522,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/16/gulp/" rel="prev" title="gulp的简易安装流程">
-                gulp的简易安装流程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -565,8 +547,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/14/hexo/"
-           data-title="hexo,搭建属于自己的博客" data-url="http://yoursite.com/2016/11/14/hexo/">
+      <div class="ds-thread" data-thread-key="2016/12/08/display/"
+           data-title="深入理解display属性" data-url="http://yoursite.com/2016/12/08/display/">
       </div>
     
   </div>
@@ -705,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#正文："><span class="nav-number">1.</span> <span class="nav-text">正文：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置环境："><span class="nav-number"></span> <span class="nav-text">配置环境：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正式安装Hexo"><span class="nav-number"></span> <span class="nav-text">正式安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Github"><span class="nav-number"></span> <span class="nav-text">配置Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#报错总结"><span class="nav-number"></span> <span class="nav-text">报错总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题推荐"><span class="nav-number"></span> <span class="nav-text">主题推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一些基本路径"><span class="nav-number">1.</span> <span class="nav-text">一些基本路径</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#深入理解display属性"><span class="nav-number">1.</span> <span class="nav-text">深入理解display属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前面的话"><span class="nav-number">1.1.</span> <span class="nav-text">前面的话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.3.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#block"><span class="nav-number">1.3.1.</span> <span class="nav-text">block</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#inline"><span class="nav-number">1.3.2.</span> <span class="nav-text">inline</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#inline-block"><span class="nav-number">1.3.3.</span> <span class="nav-text">inline-block</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#none"><span class="nav-number">1.3.4.</span> <span class="nav-text">none</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#list-item"><span class="nav-number">1.3.5.</span> <span class="nav-text">list-item</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#run-in"><span class="nav-number">1.3.6.</span> <span class="nav-text">run-in</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表格类元素"><span class="nav-number">1.3.7.</span> <span class="nav-text">表格类元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#table"><span class="nav-number">1.3.8.</span> <span class="nav-text">table</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#inline-table"><span class="nav-number">1.3.9.</span> <span class="nav-text">inline-table</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#table-cell"><span class="nav-number">1.3.10.</span> <span class="nav-text">table-cell</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#table-caption"><span class="nav-number">1.4.</span> <span class="nav-text">table-caption</span></a></li></ol></li></ol></div>
             
 
           </div>
