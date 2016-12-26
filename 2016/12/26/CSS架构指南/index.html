@@ -86,19 +86,37 @@
 
 
 
-<meta name="description" content="之前的 javascript 中一直是没有模块系统的，前辈们为了解决这些问题，提出了各种规范, 最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。而 ES6 中提供了简单的模块系统，完全可以取代现有的CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。
-基本用法es6 中新增了两个命令 port 和 import , export 命令用于规定模块的对外接口">
+<meta name="description" content="CSS 架构指南以命令式风格写 CSS 会很快地导致下面的结果：
+
+不够清晰 —— 那些带来了成吨混乱的东西，例如不清晰的依赖（难以删除或者增加东西）,
+不可维护 —— 当在创建新代码或者改善现有代码的时候效率低下，
+重复冗余 —— 使得代码臃肿而且对性能有负面影响，
+大量的存在于可扩展性，一致性以及对于新开发者的问题。
+
+通常结果就是我们获得了混乱的 UI 和 CSS。不用说都能体会到开发者心">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6学习之模块化">
-<meta property="og:url" content="http://yoursite.com/2016/12/23/ES6学习之模块化/index.html">
+<meta property="og:title" content="CSS架构指南">
+<meta property="og:url" content="http://yoursite.com/2016/12/26/CSS架构指南/index.html">
 <meta property="og:site_name" content="戌虚虚的博客">
-<meta property="og:description" content="之前的 javascript 中一直是没有模块系统的，前辈们为了解决这些问题，提出了各种规范, 最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。而 ES6 中提供了简单的模块系统，完全可以取代现有的CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。
-基本用法es6 中新增了两个命令 port 和 import , export 命令用于规定模块的对外接口">
-<meta property="og:updated_time" content="2016-12-23T08:22:00.000Z">
+<meta property="og:description" content="CSS 架构指南以命令式风格写 CSS 会很快地导致下面的结果：
+
+不够清晰 —— 那些带来了成吨混乱的东西，例如不清晰的依赖（难以删除或者增加东西）,
+不可维护 —— 当在创建新代码或者改善现有代码的时候效率低下，
+重复冗余 —— 使得代码臃肿而且对性能有负面影响，
+大量的存在于可扩展性，一致性以及对于新开发者的问题。
+
+通常结果就是我们获得了混乱的 UI 和 CSS。不用说都能体会到开发者心">
+<meta property="og:updated_time" content="2016-12-26T08:44:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6学习之模块化">
-<meta name="twitter:description" content="之前的 javascript 中一直是没有模块系统的，前辈们为了解决这些问题，提出了各种规范, 最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。而 ES6 中提供了简单的模块系统，完全可以取代现有的CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。
-基本用法es6 中新增了两个命令 port 和 import , export 命令用于规定模块的对外接口">
+<meta name="twitter:title" content="CSS架构指南">
+<meta name="twitter:description" content="CSS 架构指南以命令式风格写 CSS 会很快地导致下面的结果：
+
+不够清晰 —— 那些带来了成吨混乱的东西，例如不清晰的依赖（难以删除或者增加东西）,
+不可维护 —— 当在创建新代码或者改善现有代码的时候效率低下，
+重复冗余 —— 使得代码臃肿而且对性能有负面影响，
+大量的存在于可扩展性，一致性以及对于新开发者的问题。
+
+通常结果就是我们获得了混乱的 UI 和 CSS。不用说都能体会到开发者心">
 
 
 
@@ -126,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/23/ES6学习之模块化/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/26/CSS架构指南/"/>
 
 
 
 
 
-  <title> ES6学习之模块化 | 戌虚虚的博客 </title>
+  <title> CSS架构指南 | 戌虚虚的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -266,7 +284,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/23/ES6学习之模块化/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/26/CSS架构指南/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="戌虚虚">
@@ -290,7 +308,7 @@
             
             
               
-                ES6学习之模块化
+                CSS架构指南
               
             
           </h1>
@@ -302,8 +320,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-23T18:52:59+08:00">
-              2016-12-23
+            <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-26T16:44:38+08:00">
+              2016-12-26
             </time>
 
             &nbsp;|&nbsp;
@@ -311,8 +329,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-check-o"></i>
             </span>
-            <time title="Post modified" itemprop="dateModified" datetime="2016-12-23T16:22:00+08:00">
-              2016-12-23
+            <time title="Post modified" itemprop="dateModified" datetime="2016-12-26T16:44:29+08:00">
+              2016-12-26
             </time>
             
           </span>
@@ -323,8 +341,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/23/ES6学习之模块化/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/23/ES6学习之模块化/" itemprop="commentCount"></span>
+                <a href="/2016/12/26/CSS架构指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/26/CSS架构指南/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -334,7 +352,7 @@
 
           
           
-             <span id="/2016/12/23/ES6学习之模块化/" class="leancloud_visitors" data-flag-title="ES6学习之模块化">
+             <span id="/2016/12/26/CSS架构指南/" class="leancloud_visitors" data-flag-title="CSS架构指南">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -360,148 +378,86 @@
 
       
         <hr>
-<p>之前的 javascript 中一直是没有模块系统的，前辈们为了解决这些问题，提出了各种规范, 最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。而 ES6 中提供了简单的模块系统，完全可以取代现有的CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。</p>
-<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>es6 中新增了两个命令 <code>port</code> 和 <code>import</code> , <code>export</code> 命令用于规定模块的对外接口，<code>import</code> 命令用于输入其他模块提供的功能。</p>
+<h1 id="CSS-架构指南"><a href="#CSS-架构指南" class="headerlink" title="CSS 架构指南"></a>CSS 架构指南</h1><p>以命令式风格写 CSS 会很快地导致下面的结果：</p>
+<ul>
+<li>不够清晰 —— 那些带来了成吨混乱的东西，例如不清晰的依赖（难以删除或者增加东西）,</li>
+<li>不可维护 —— 当在创建新代码或者改善现有代码的时候效率低下，</li>
+<li>重复冗余 —— 使得代码臃肿而且对性能有负面影响，</li>
+<li>大量的存在于可扩展性，一致性以及对于新开发者的问题。</li>
+</ul>
+<p>通常结果就是我们获得了混乱的 UI 和 CSS。不用说都能体会到开发者心中的怒火熊熊！这还将导致乱七八糟的 UX。让我们来看看为了防止上面的情况发生我们能做什么。</p>
 <hr>
-<h5 id="一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个-变量，就必须使用export关键字输出该变量。下面是一个JS文件，里面使用export命令输出变量。"><a href="#一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个-变量，就必须使用export关键字输出该变量。下面是一个JS文件，里面使用export命令输出变量。" class="headerlink" title="一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个 变量，就必须使用export关键字输出该变量。下面是一个JS文件，里面使用export命令输出变量。"></a>一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个 变量，就必须使用export关键字输出该变量。下面是一个JS文件，里面使用export命令输出变量。</h5><pre><code>// math.js
-
-export const add = function (a, b) {
-    return a + b
-}
-
-export const subtract = function (a, b) {
-    return a - b
-}
-</code></pre><h5 id="使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）。"><a href="#使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）。" class="headerlink" title="使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）。"></a>使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）。</h5><pre><code>// main.js
-import { add, subtract } from &apos;./test.js&apos;
-
-add(1, 2)
-substract(3, 2)
-</code></pre><h3 id="export-详细用法"><a href="#export-详细用法" class="headerlink" title="export 详细用法"></a>export 详细用法</h3><p>上面介绍了模块化最基础的用法，export 不止可以导出函数，还可以导出对象，类，字符串等等</p>
-<pre><code>export const obj = {
-    test1: &apos;&apos;
-}
-
-export const test = &apos;&apos;
-
-export class Test {
-    constructor() {
-    }
-}    
-</code></pre><h5 id="export的写法，除了像上面这样，还有另外一种。"><a href="#export的写法，除了像上面这样，还有另外一种。" class="headerlink" title="export的写法，除了像上面这样，还有另外一种。"></a>export的写法，除了像上面这样，还有另外一种。</h5><pre><code>let a = 1
-let b = 2
-let c = 3
-export {
-      a,
-    b,
-    c
-}
-</code></pre><p>上面代码在export命令后面，使用大括号指定所要输出的一组变量。它与前一种写法是等价的，但是应该优先考虑使用这种写法。因为这样就可以在脚本尾部，一眼看清楚输出了哪些变量。</p>
-<h5 id="通过-as-改变输出名称"><a href="#通过-as-改变输出名称" class="headerlink" title="通过 as 改变输出名称"></a>通过 as 改变输出名称</h5><pre><code>// test.js
-let a = 1
-let b = 2
-let c = 3
-export {
-       a as test,
-    b,
-    c
-}
-import { test, b, c} from &apos;./test.js&apos; // 改变命名后只能写 as 后的命名
-</code></pre><p>上面啊的写法中，<code>import</code> 中需要指定加载的变量名或函数名，否则无法加载。但是，用户肯定希望快速上手，未必愿意阅读文档，去了解模块有哪些属性和方法。</p>
-<h5 id="export-default-指定默认输出-import-无需知道变量名就可以直接使用"><a href="#export-default-指定默认输出-import-无需知道变量名就可以直接使用" class="headerlink" title="export default 指定默认输出, import 无需知道变量名就可以直接使用"></a><code>export default</code> 指定默认输出, import 无需知道变量名就可以直接使用</h5><pre><code>// test.js
-
-export default function () {
-    console.log(&apos;hello world&apos;)
-}
-</code></pre><p>可以指定任意变量名</p>
-<pre><code>import say from &apos;./test.js&apos; // 这里可以指定任意变量名
-
-say() // hello world
-</code></pre><p>有了export default命令，加载模块时就非常直观了，以一些常用的模块为例</p>
-<pre><code>import $ from &apos;jQuery&apos;   // 加载jQuery 库
-import _ from &apos;lodash&apos;   // 加载 lodash
-import moment from &apos;moment&apos; // 加载 moment
-</code></pre><h3 id="import-详细用法"><a href="#import-详细用法" class="headerlink" title="import 详细用法"></a>import 详细用法</h3><p><code>import</code> 为加载模块的命令，基础使用方式和之前一样</p>
-<pre><code>// main.js
-import { add, subtract } from &apos;./test&apos;
-
-// 对于export default 导出的
-
-import say from &apos;./test&apos;
-</code></pre><p>通过 as 命令修改导入的变量名</p>
-<pre><code>import {add as sum, subtract} from &apos;./test&apos;
-
-sum (1, 2)
-</code></pre><h3 id="加载模块的全部"><a href="#加载模块的全部" class="headerlink" title="加载模块的全部"></a>加载模块的全部</h3><p>除了指定输出变量名或者 <code>export.default</code> 定义的导入， 还可以通过<code>*</code>号加载模块的全部.</p>
-<pre><code>// math.js
-
-export const add = function (a, b) {
-    return a + b
-}
-
-export const subtract = function (a, b) {
-    return a - b
-}
-</code></pre><p>2</p>
-<pre><code>import * as math from &apos;./test.js&apos;
-
-math.add(1, 2)
-math.subtract(1, 2)
-</code></pre><h3 id="开始使用ES6"><a href="#开始使用ES6" class="headerlink" title="开始使用ES6"></a>开始使用ES6</h3><hr>
-<p>上面介绍了，es6 中模块的使用方式，但是现在es6的模块化，无论在浏览器端还是 node.js 上都没有得到很好的支持，所以需要，一些转码的工具。使我们可以用es6的方式来编码，最后输出es5的代码。<br>这里推荐一款基于 es6 模块化方式的打包神器 rollup，它使用 Tree-shaking 的技术打包，基本可以做到零冗余的代码，而且配置简单，打包速度也够快。</p>
-<h5 id="安装-rollup"><a href="#安装-rollup" class="headerlink" title="安装 rollup"></a>安装 rollup</h5><hr>
-<p>首先在 <code>package.json</code> 中加上 <code>rollup</code> 打包依赖的包</p>
-<pre><code>{
-    // ...
-    &quot;devDependencies&quot;: {
-        &quot;babel-core&quot;: &quot;^6.13.0&quot;,
-           &quot;babel-preset-es2015-rollup&quot;: &quot;^1.1.1&quot;,
-        &quot;rollup&quot;: &quot;^0.34.3&quot;,
-        &quot;rollup-plugin-babel&quot;: &quot;^2.6.1&quot;,
-        &quot;rollup-plugin-commonjs&quot;: &quot;^3.3.1&quot;,
-        &quot;rollup-plugin-node-resolve&quot;: &quot;^2.0.0&quot;,
-        &quot;rollup-plugin-uglify&quot;: &quot;^1.0.1&quot;
-    }
-}
-</code></pre><h5 id="编写打包程序"><a href="#编写打包程序" class="headerlink" title="编写打包程序"></a>编写打包程序</h5><hr>
-<p>下面是我的打包程序</p>
-<pre><code>// build.js
-var rollup = require(&apos;rollup&apos;);
-var babel = require(&apos;rollup-plugin-babel&apos;);         // babel 插件
-var uglify = require(&apos;rollup-plugin-uglify&apos;);       // js 混淆压缩插件
-var npm = require(&apos;rollup-plugin-node-resolve&apos;);    // 使用第三方包依赖
-var commonjs = require(&apos;rollup-plugin-commonjs&apos;);   // CommonJS模块转换为ES6
-rollup.rollup({
-    entry: &apos;src/index.js&apos;, //入口文件
-    plugins: [  // 插件配置
-        npm({ jsnext: true, main: true }),
-        commonjs(),
-        uglify(),
-        babel({
-            exclude: &apos;node_modules/**&apos;,
-            presets: [ &quot;es2015-rollup&quot; ]
-        })
-    ]
-}).then(function(bundle) {
-    // 打包之后生成一个 `budble` 把它写入文件即可
-    bundle.write({
-        // 转化格式 cjs 代表 commonJs, 还支持 iife, amd, umd, es6 ....
-        format: &apos;cjs&apos;, 
-        banner: &apos;si_log.js v0.1.1&apos;,     //文件顶部的广告
-        dest: &apos;dist/si_log_common.js&apos;
-    });
-});
-</code></pre><h3 id="在-package-json-中加上执行脚本"><a href="#在-package-json-中加上执行脚本" class="headerlink" title="在 package.json 中加上执行脚本"></a>在 package.json 中加上执行脚本</h3><hr>
-<pre><code>{
-    // ...
-    &quot;scripts&quot;: {
-        // ...
-        &quot;build&quot;: &quot;node build.js&quot;
-    },
-}
-</code></pre><p>然后，执行命令</p>
-<pre><code>npm run build
-</code></pre><p>ok 到这里打包就都结束了。</p>
+<h4 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a><strong>优先级</strong></h4><p>在选择器之间的 <a href="http://www.htmldog.com/guides/css/intermediate/specificity/" target="_blank" rel="external">优先级</a> 战争通常反映了糟糕的代码质量。拥有低的优先级将帮助更长时间地维护一个大型 CSS 项目的完整性和性能。</p>
+<p>首先避免所有不必要的深层选择器。为了给一个箭头样式，你真的没有必要写出这样的选择器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.page-quick-sidebar-wrapper .page-quick-sidebar .page-quick-sidebar-chat .page-quick-sidebar-chat-user .page-quick-sidebar-chat-user-messages .post.out .message .arrow &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们可以使用更有意义的选择器例如 <em>.message-arrow { … }</em> 并且用它来代替 <em>.arrow</em>？或者只需要给 <em>.arrow</em> 写样式如果只有一个箭头需要给样式？</p>
+<p>在大多数情况下会出现 <a href="http://sass-lang.com/guide#topic-3" target="_blank" rel="external">SASS/SCSS 嵌套陷阱</a>。嵌套不应该多于三层。停止趋向于使 SASS 嵌套跟 html 嵌套一致。别尝试使 CSS 选择器视觉上层次分明（这看起来很美丽但导致了维护开销）。为我们的利益着想，<strong>别基于他们在哪里或者他们怎么表现而是基于他们是什么来赋予样式</strong>（位置独立性）。</p>
+<h4 id="创建选择器"><a href="#创建选择器" class="headerlink" title="创建选择器"></a><strong>创建选择器</strong></h4><p>ID 比类名强了好几个数量级。因此你不能轻易地用类名选择器重载 ID 选择器的样式。避免将 ID 作为样式的钩子，但如果你为了其他东西（例如 JS 钩子）需要也可以使用它们。当创建选择器时似乎类就是最好的解决方案。那标签选择器呢？只有在重置或者应用普遍样式时你才能使用标签。使用 !important 并不是一个安逸的实践，除非「你在使用的时候不会愤怒」。它完美适配你的通用类。</p>
+<hr>
+<h4 id="命名"><a href="#命名" class="headerlink" title="命名"></a><strong>命名</strong></h4><p>命名约定有益于立刻理解一个特定的样式属于哪一个类别以及它在总体页面里的职责。</p>
+<p>这是一些适合应用于任何命名约定里的规则：</p>
+<ul>
+<li><strong>基于它是什么而不是它看起来或者表现起来怎么样来命名某个事物</strong>.</li>
+<li>通常来说，<strong>有更长的类名比更复杂的优先级更好</strong>。</li>
+</ul>
+<p>在大多数情况下给类和 id 加前缀是不错的。使用前缀和/或命名系统<strong>帮助区分框架和自定义类/id</strong>。更重要的是通过这样做你可以<strong>轻易地避免命名冲突</strong>（例如你希望实现一个日期选择器，它添加了全局类如 .next 或者 .prev。如果你之前已经使用了这些类名，会发生什么？）所以怎么使用前缀？</p>
+<ul>
+<li><em>.u-hide-text</em> （“u”表示它是一个有特定目的的通用类。它会在很多地方使用而且不应该被扩展。通常你希望确认通用类会赢得优先级战争。因此在这个例子中使用 !important 是个不错的选择。）</li>
+<li><em>.l-main-nav</em> （“l”指布局或者组件类。用于把模块组合成组件以及将他们定位在页面中）</li>
+<li><em>.b-main-nav</em> （“b”前缀能被应用在主块或是模块容器中）</li>
+<li><em>.js-header-animate</em> （“js”指这个类只能被 JavaScript 使用。这避免了基于类名的意外破坏行为或测试。）</li>
+</ul>
+<h4 id="BEM"><a href="#BEM" class="headerlink" title="BEM"></a><strong>BEM</strong></h4><p>一种更流行的命名约定是 <a href="http://getbem.com/introduction/" target="_blank" rel="external">BEM</a>。通过使用这种命名约定你会自动地以一组独立的模块“而不是我怎么赋予这个页面样式”来考虑布局。一些常见的 BEM 规则：</p>
+<ul>
+<li>你希望<strong>只使用类来构建选择器</strong>。在大多数情况下你的选择器是一个独立而有意义的类。</li>
+<li>类名从<strong>块/模块</strong>的名字开始，下一个是<strong>元素</strong>的名字（紧接在两个下划线之后），最后是<strong>修饰器</strong>的名字（在两个破折号之后）。例如 <em>.main-nav__item — current</em>。</li>
+<li>修饰器既能应用在块上也能应用在元素上。</li>
+<li>不能有元素出现在它的块之外。</li>
+<li>你可以在它的块内嵌套元素，但是在这种情况下不要写出像这样的选择器: .block__element1__element2。而是始终使用：.block__element1 .block__element2。</li>
+<li><strong>块是独立的</strong>，只会共享大部分普遍样式（重置和一些基础样式）。这减少了代码量，以及使其可重用。</li>
+<li>你不希望直接在块或者模块上直接应用布局样式。这就是为什么我们想要使用布局类的原因。</li>
+</ul>
+<p>多亏了 BEM 我们现在有了：</p>
+<ul>
+<li>模块化 CSS 代码。这使得 CSS 很容易地转换到 React 世界，在这里中你经常希望拥有每一个组件单独的 css 文件；</li>
+<li>非常低的优先级；</li>
+<li>解耦 HTML 结构和 CSS；</li>
+<li>提高可读性（你能够在看 HTML 的时候知道更多关于 CSS 的东西）；</li>
+<li>不再有命名冲突（单独的模块帮助避免了把 CSS 放在全局范围内）；</li>
+<li>对于如何在一个块中命名一个新变量的清晰规则；</li>
+<li>级联继承样式不再有问题（在你不想要的地方出现意外的样式泄漏）；</li>
+<li>减少类之后更小的 HTML 以及令 HTML 可重用。</li>
+</ul>
+<p>相关链接</p>
+<p><a href="https://vimeo.com/118001406" target="_blank" rel="external">Łukasz Kliś — To BEM, or not to BEM</a>（波兰语）</p>
+<h4 id="移动优先"><a href="#移动优先" class="headerlink" title="移动优先"></a>移动优先</h4><p>为什么这个概念是有益的？首先通过实现移动端版本你会强迫去考虑内容层次。你希望以最可行的方法（简单而高效的解决方案）提供最需要的功能和内容。这对于桌面版本来说是有正面作用的。其次，增加比删除要更容易。</p>
+<p><strong>编写媒体查询</strong></p>
+<p>使用预定义的断点（像 bootstrap 使用的那样）对于栅格管理来说很好但是对于改变模块样式来说不是必要的。添加一些自定义断点完全没有坏处。我们希望我们的 webapp 在宽泛范围内的解决方案中都可以适应地很好。而不只是对于那些使用栅格框架定义的。通常来说使用“min-width”断点是更优雅的方案。尽量避免只使用“max-width”断点。通过这样做你会得到更少的代码，更少的重载和更少的 !important 声明。</p>
+<h4 id="组件，模块和元素"><a href="#组件，模块和元素" class="headerlink" title="组件，模块和元素"></a>组件，<strong>模块和元素</strong></h4><p>尽可能快的尝试建立可独立的模块和组件（模块的集合）。当创建类似的模块时记得以适当的 CSS 方式使用 DRY 原理。详见 <a href="http://maintainablecss.com/chapters/modules/" target="_blank" rel="external">这里</a> 和 <a href="http://maintainablecss.com/chapters/reuse/" target="_blank" rel="external">这里</a>。</p>
+<p><strong>模块，组件和元素之间的区别在哪里？</strong></p>
+<p><strong>组件</strong>是模块的集合。在大多数情况下它会跟布局类处在相同的抽象层次。</p>
+<p><strong>模块</strong>是元素的集合。应该可重用而不依赖于其他模块。</p>
+<p><strong>元素</strong>是不能单独使用和需要父级实体的代码片段。</p>
+<p>例：页眉是组件。它包括了模块——导航栏和 logo 模块。导航栏有项目元素。Logo 有图片和文本元素。</p>
+<h4 id="文件和目录结构组织"><a href="#文件和目录结构组织" class="headerlink" title="文件和目录结构组织"></a>文件和目录结构组织</h4><p>为了创造可维护的 CSS 架构我们需要比一个巨大的 main.css 文件和第三方目录更多的东西。下面的描述主要基于 <a href="http://smartpoint.bg/uploads/files/9f3776388c0da3d932e9398daf7a45b6.pdf" target="_blank" rel="external">SMACSS</a> 概念。</p>
+<p>首先我们将需要一个预处理器用于编译 CSS 文件（在每一次保存之后），生成依赖和教新的 CSS 技巧。出于 debug 需要我们不希望在开发环境中压缩文件。</p>
+<hr>
+<p><strong>依赖</strong></p>
+<p>我们希望以下面的顺序加载我们的 CSS：</p>
+<ol>
+<li>第三方样式（框架，插件样式）</li>
+<li>下一个是我们的通用部分。我们希望加载所有的变量，mixins 和其他助手（类，占位符）。</li>
+<li>如果我们没有使用一个提供了 CSS 重置的框架，那么我们绝对希望引入 normalize.css（或者其他类似的） 加上我们自定义的重置和基础样式。</li>
+<li>最后我们可以引入布局和模块样式。</li>
+</ol>
+<p><strong>项目结构</strong></p>
+<p>为了确保布局一致性我们应该努力保持（只保持）全局范围共享 css。</p>
+<p><strong>— 第三方</strong> 全局范围使用的工具</p>
+<p><strong>— 基础 CSS 重置</strong>（例如 normalize）和 <strong>基础样式</strong>。“基础样式是默认的。他们几乎都是清一色的单元素选择器但也可以包括属性选择器，伪类选择器，后代选择器或者同级选择器。本质上来说，一个基础样式意味着不管这个元素在页面上的何处，它都应该看起来像这样。”</p>
+<p><strong>— 依赖</strong> 全局使用的：变量，度量，颜色，排版和表单样式，SASS mixins 和函数，debug 工具。</p>
+<p><strong>— 模块</strong> 是可重用的，在我们的设计中模块化的部分。每一个模块总是使用一个文件。</p>
+<p><strong>— 布局</strong> 模块的容器。布局将页面划分成多个部分，并使一个或多个模块处在适当的位置，将它们定位在页面中。这是唯一一个你可以添加 margins，width，height 等等的地方。所以布局与模块一起合作，但是模块是独立的单元而且可以在任何上下文里使用。</p>
+<p><strong>— 状态</strong> 是用来描述我们的模块或者布局在特定状态下的将会如何显示的方式。是隐藏的还是展开的？是激活的还是未激活的？是关于描述一个模块或者布局在更大或者更小的屏幕里如何显示的。还是关于描述一个模块在不同的视图中例如主页或内页里应该如何显示。</p>
 
       
     </div>
@@ -528,8 +484,8 @@ rollup.rollup({
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/23/正则表达式概括/" rel="next" title="正则表达式概括">
-                <i class="fa fa-chevron-left"></i> 正则表达式概括
+              <a href="/2016/12/23/ES6学习之模块化/" rel="next" title="ES6学习之模块化">
+                <i class="fa fa-chevron-left"></i> ES6学习之模块化
               </a>
             
           </div>
@@ -537,10 +493,6 @@ rollup.rollup({
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/26/CSS架构指南/" rel="prev" title="CSS架构指南">
-                CSS架构指南 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -566,8 +518,8 @@ rollup.rollup({
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/23/ES6学习之模块化/"
-           data-title="ES6学习之模块化" data-url="http://yoursite.com/2016/12/23/ES6学习之模块化/">
+      <div class="ds-thread" data-thread-key="2016/12/26/CSS架构指南/"
+           data-title="CSS架构指南" data-url="http://yoursite.com/2016/12/26/CSS架构指南/">
       </div>
     
   </div>
@@ -706,7 +658,7 @@ rollup.rollup({
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">1.</span> <span class="nav-text">基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个-变量，就必须使用export关键字输出该变量。下面是一个JS文件，里面使用export命令输出变量。"><span class="nav-number">1.0.1.</span> <span class="nav-text">一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个 变量，就必须使用export关键字输出该变量。下面是一个JS文件，里面使用export命令输出变量。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）。"><span class="nav-number">1.0.2.</span> <span class="nav-text">使用export命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件）。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#export-详细用法"><span class="nav-number">2.</span> <span class="nav-text">export 详细用法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#export的写法，除了像上面这样，还有另外一种。"><span class="nav-number">2.0.1.</span> <span class="nav-text">export的写法，除了像上面这样，还有另外一种。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#通过-as-改变输出名称"><span class="nav-number">2.0.2.</span> <span class="nav-text">通过 as 改变输出名称</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#export-default-指定默认输出-import-无需知道变量名就可以直接使用"><span class="nav-number">2.0.3.</span> <span class="nav-text">export default 指定默认输出, import 无需知道变量名就可以直接使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import-详细用法"><span class="nav-number">3.</span> <span class="nav-text">import 详细用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加载模块的全部"><span class="nav-number">4.</span> <span class="nav-text">加载模块的全部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始使用ES6"><span class="nav-number">5.</span> <span class="nav-text">开始使用ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装-rollup"><span class="nav-number">5.0.1.</span> <span class="nav-text">安装 rollup</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#编写打包程序"><span class="nav-number">5.0.2.</span> <span class="nav-text">编写打包程序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-package-json-中加上执行脚本"><span class="nav-number">6.</span> <span class="nav-text">在 package.json 中加上执行脚本</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-架构指南"><span class="nav-number">1.</span> <span class="nav-text">CSS 架构指南</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#优先级"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">优先级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建选择器"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">创建选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命名"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BEM"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">BEM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动优先"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">移动优先</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件，模块和元素"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">组件，模块和元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件和目录结构组织"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">文件和目录结构组织</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
